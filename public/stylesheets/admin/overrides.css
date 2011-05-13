@@ -1,1 +1,6 @@
 /* Make your custom overrides here. This file will not be updated by Radiant */
+#pages .page{clear:both;}
+#pages .page .attributes span{}
+#pages .node{}
+#pages .published_status {position:absolute;right:200px;}
+#pages .actions {position:absolute;right:20px;}

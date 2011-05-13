@@ -1,0 +1,15 @@
+- @page_title = t('pages') + ' - ' + default_page_title
+
+.outset
+  = render_region :top
+  %ol#pages.index{:summary=>"Page hierarchy of the current site"}
+    - if @homepage
+      = render_node @homepage
+    - else
+      %li.empty= t('no_pages')
+  = render_region :bottom
+
+- unless @homepage
+  #actions
+    %ul
+      %li= link_to image('plus') + " " + t("new_homepage"), new_admin_page_path

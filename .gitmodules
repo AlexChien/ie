@@ -19,6 +19,6 @@
 [submodule "vendor/plugins/will_paginate"]
 	path = vendor/plugins/will_paginate
 	url = git://github.com/mislav/will_paginate.git
-[submodule "vendor/extensions/drag"]
-	path = vendor/extensions/drag
-	url = git://github.com/squaretalent/radiant-drag-extension.git
+[submodule "vendor/extensions/drag_order"]
+	path = vendor/extensions/drag_order
+	url = https://github.com/gerrit/radiant-drag_order-extension.git

@@ -562,7 +562,7 @@ body.single_form #content #single_form {
     margin: 1.75em 0 1em; }
 body.single_form #content p.version {
   background: url(../../images/admin/single_form_shadow.png) top center no-repeat;
-  color: #666;
+  color: #666; text-indent: -9999px;
   font-size: 80%;
   padding-top: 10px;
   margin-top: 0; }

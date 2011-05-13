@@ -1,3 +1,21 @@
 [submodule "vendor/extensions/asset_packager"]
 	path = vendor/extensions/asset_packager
 	url = git://github.com/nelstrom/radiant-asset_packager-extension.git
+[submodule "vendor/extensions/capistrano"]
+	path = vendor/extensions/capistrano
+	url = git://github.com/ehaselwanter/radiant-capistrano-extension.git
+[submodule "vendor/extensions/multilingual_pages"]
+	path = vendor/extensions/multilingual_pages
+	url = git://github.com/yeah/radiant-multilingual-pages-extension.git
+[submodule "vendor/extensions/paperclipped"]
+	path = vendor/extensions/paperclipped
+	url = git://github.com/kbingman/paperclipped.git
+[submodule "vendor/extensions/settings"]
+	path = vendor/extensions/settings
+	url = git://github.com/Squeegy/radiant-settings.git
+[submodule "vendor/extensions/tiny_paper"]
+	path = vendor/extensions/tiny_paper
+	url = git://github.com/Aissac/radiant-tiny-paper-extension.git
+[submodule "vendor/plugins/will_paginate"]
+	path = vendor/plugins/will_paginate
+	url = git://github.com/mislav/will_paginate.git

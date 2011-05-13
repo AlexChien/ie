@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091003095744) do
+ActiveRecord::Schema.define(:version => 20100810151922) do
 
   create_table "assets", :force => true do |t|
     t.string   "caption"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(:version => 20091003095744) do
     t.integer "position"
   end
 
+  create_table "page_fields", :force => true do |t|
+    t.integer "page_id"
+    t.string  "name"
+    t.string  "content"
+  end
+
+  add_index "page_fields", ["page_id", "name", "content"], :name => "index_page_fields_on_page_id_and_name_and_content"
+
   create_table "page_parts", :force => true do |t|
     t.string  "name",      :limit => 100
     t.string  "filter_id", :limit => 25
@@ -78,9 +86,8 @@ ActiveRecord::Schema.define(:version => 20091003095744) do
     t.integer  "updated_by_id"
     t.boolean  "virtual",                           :default => false, :null => false
     t.integer  "lock_version",                      :default => 0
-    t.string   "description"
-    t.string   "keywords"
     t.string   "multilingual_slugs"
+    t.integer  "position",                          :default => 0
   end
 
   add_index "pages", ["class_name", "multilingual_slugs", "parent_id"], :name => "index_pages_on_class_name_and_multilingual_slugs_and_parent_id"

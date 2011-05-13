@@ -20,9 +20,10 @@ Radiant::Initializer.run do |config|
   # config.extensions = [ :all ]
   
   # By default, only English translations are loaded. Remove any of these from
-  # the list below if you'd like to provide any of the supported languages
-  config.extensions -= [:dutch_language_pack, :french_language_pack, :german_language_pack,
-                        :italian_language_pack, :japanese_language_pack, :russian_language_pack]
+  # the list below if you'd like to provide any of the additional options
+  config.ignore_extensions [:dutch_language_pack, :french_language_pack, :german_language_pack,
+                            :italian_language_pack, :japanese_language_pack, :russian_language_pack,
+                            :debug]
 
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
@@ -30,7 +31,7 @@ Radiant::Initializer.run do |config|
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
     :key => '_www_session',
-    :secret      => '5b91acab4700097a835dd5d09fdfe16fa18ef1c6'
+    :secret      => '174537abb3fa87d8ca8f18f96fbd5a62e5fc7868'
   }
 
   # Comment out this line if you want to turn off all caching, or
@@ -73,8 +74,10 @@ Radiant::Initializer.run do |config|
       html
     end
   end
-
-  config.gem 'will_paginate', :version => '~> 2.3.11', :source => 'http://gemcutter.org'
+  
+  config.gem 'haml', :version => '3.0.25'
+  config.gem 'compass', :version => '~> 0.10.6'
+  config.gem 'will_paginate', :version => '~> 2.3.11'
 
   config.after_initialize do
     # Add new inflection rules using the following format:

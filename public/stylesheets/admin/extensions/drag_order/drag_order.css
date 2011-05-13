@@ -1,0 +1,27 @@
+.index#pages .page.drop_hover .attributes {
+  border-bottom-color: #e0e3ec; }
+.index#pages .page.drop_hover li {
+  border-color: transparent; }
+.index#pages .page.drop_insert .attributes {
+  background-color: #f6f8ff;
+  border-color: transparent; }
+.index#pages .page.drop_insert li {
+  border-color: transparent; }
+  .index#pages .page.drop_insert li .attributes {
+    background-color: #ffffff; }
+.index#pages .page.drag_move .children {
+  opacity: 0.25;
+  filter: alpha(opacity = 25); }
+.index#pages .page .attributes .attribute.handle {
+  position: absolute;
+  cursor: move;
+  left: 9px;
+  width: 24px;
+  visibility: hidden; }
+  .index#pages .page .attributes .attribute.handle img {
+    cursor: move; }
+.index#pages .page .attributes:hover .attribute.handle {
+  visibility: visible; }
+
+.inset .handle {
+  display: none; }

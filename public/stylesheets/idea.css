@@ -64,6 +64,7 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .numeral { line-height:22px; padding:3px 0px; margin:0px; }
 .numeral b { color:#47af2f; margin-right:8px;}
 .togglecontent { border-top:1px solid #999; width:605px; margin:0px; padding-top:5px; }
+.togglecontent p { text-align:justify; }
 .img { text-align:center; margin:8px 0px; }
 .toggle { width:200px; display:inline;}
 .toggle dl dt { background: url(../images/plus.gif) no-repeat scroll 5px 10px; height:30px; width:165px; line-height:30px; cursor:pointer; margin:8px 0; padding-left:25px; display:block; border-bottom:1px dotted #666; }

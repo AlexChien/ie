@@ -3,9 +3,14 @@
 		<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>理想能源</title>
+		<link href="/stylesheets/jquery.treeview.css" rel="stylesheet" type="text/css" />
 		<link href="/stylesheets/idea.css" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="/javascripts/jQuery-1.5.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
+		<script type="text/javascript" src="/javascripts/jquery.treeview.js"></script>
 		<script type="text/javascript">	
+			$(document).ready(function(){
+				$("#navtree").treeview({animated: "fast",unique: true,persist: "location"});
+			});
 			
 			$(function(){
 				$(".toggle dl dd").hide();
@@ -65,26 +70,47 @@
               <div class="content2j">
                 <div class="left"><span><img src="/images/2j04.jpg" /></span><span class="leftnav">
                   <div class="leftnav01">产品与技术</div>
+
+				  <ul id="navtree" class="navtree filetree treeview-famfamfam treeview">
+					<li><span>太阳能电池</span>
+						<ul>
+							<li><a href="#" id="get-to-know-solar-power">了解太阳能</a></li>
+							<li><a href="#" id="gui-ji-bo-mo">硅基薄膜层叠电池</a></li>
+							<li><a href="#" id="solar-roadmap">理想能源薄膜电池设备研发目标</a></li>
+							<li><a href="#" id="pecvd">PECVD</a></li>
+							<li class="font02"><a href="#" id="lpcvd">LPCVD</a></li>
+							<li><a href="#" id="news-about-solar-energy">行业新闻</a></li>
+						</ul>
+					</li>
+					<li><span>发光二极管</span>
+						<ul>
+							<li><a href="#" id="get-to-know-led">了解发光二极管</a></li>
+							<li><a href="#" id="mocvd">MOCVD</a></li>
+							<li><a href="#" id="news-about-led">行业新闻</a></li>
+						</ul>
+					</li>
+				</ul>
+
                   <div class="leftnav02">
                   <div class="toggle">
                       <dl>
                       <dt>太阳能电池</dt>
                       <dd>
                           <ul>
-                          <li><a href="#">了解太阳能</a></li>
-                          <li><a href="#">硅基薄膜层叠电池</a></li>
-                          <li><a href="#">理想能源薄膜电池设备研发目标</a></li>
-                          <li><a href="#">PECVD</a></li>
-                          <li class="font02">LPCVD</li>
-                          <li><a href="#">行业新闻</a></li>
+                          <li><a href="#" id="get-to-know-solar-power">了解太阳能</a></li>
+                          <li><a href="#" id="gui-ji-bo-mo">硅基薄膜层叠电池</a></li>
+                          <li><a href="#" id="solar-roadmap">理想能源薄膜电池设备研发目标</a></li>
+                          <li><a href="#" id="pecvd">PECVD</a></li>
+                          <li class="font02"><a href="#" id="lpcvd">LPCVD</a></li>
+                          <li><a href="#" id="news-about-solar-energy">行业新闻</a></li>
                         </ul>
                         </dd>
                       <dt>发光二极管</dt>
                       <dd>
                           <ul>
-                          <li><a href="#">了解发光二极管</a></li>
-                          <li><a href="#">MOCVD</a></li>
-                          <li><a href="#">行业新闻</a></li>
+                          <li><a href="#" id="get-to-know-led">了解发光二极管</a></li>
+                          <li><a href="#" id="mocvd">MOCVD</a></li>
+                          <li><a href="#" id="news-about-led">行业新闻</a></li>
                         </ul>
                         </dd>
                     </dl>

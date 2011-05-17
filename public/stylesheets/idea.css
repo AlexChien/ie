@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
-body { font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#333333; background:#ebebeb }
+body { font-family: Arial, Helvetica, sans-serif, "微软雅黑"; font-size:12px; color:#333333; background:#ebebeb }
 a { color:#333333; text-decoration:none; }
 a:hover { color:#47af2f; text-decoration:none; }
 div, form, img, ul, ol, li, dl, dt, dd { margin: 0; padding: 0; border: 0; }
@@ -64,8 +64,9 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .numeral { line-height:22px; padding:3px 0px; margin:0px; }
 .numeral b { color:#47af2f; margin-right:8px;}
 .togglecontent { border-top:1px solid #999; width:605px; margin:0px; padding-top:5px; }
+.togglecontent p { text-align:justify; }
 .img { text-align:center; margin:8px 0px; }
-.toggle { width:200px; display:inline;}
+/*.toggle { width:200px; display:inline;}
 .toggle dl dt { background: url(../images/plus.gif) no-repeat scroll 5px 10px; height:30px; width:165px; line-height:30px; cursor:pointer; margin:8px 0; padding-left:25px; display:block; border-bottom:1px dotted #666; }
 .toggle dl dt.current { background: url(../images/minus.gif) no-repeat scroll 5px 10px; }
 .toggle dl dd { padding-left:0px; line-height:30px;}
@@ -80,4 +81,7 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .toggle01 dl dd p { line-height:22px; margin:0px; padding:5px 0px; text-indent:24px; }
 .toggle01 a { color:#47af2f;}
 .toggle01 a:hover { color:#47af2f; }
-
+*/
+.footnote {font-size:11px !important;color:#999 !important;}
+.imgintext {width:200px; margin-left:10px; margin-bottom:10px; padding:5px; border:1px solid #ccc; text-align:center; float:right; clear:both; background-color:white;}
+ul.normal li {list-style:square outside;margin-left:12px;}

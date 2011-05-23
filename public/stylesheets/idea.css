@@ -12,27 +12,27 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .font01:hover { color:#333333; text-decoration:none; }
 .font02 { color:#47af2f; text-decoration:none; }
 .form { border:1px solid #686868; }
-#bg { background: url(../images/idea.jpg) repeat-x; }
+#bg { background: url(/images/idea.jpg) repeat-x; }
 #idea { width:960px; margin:auto; }
 .sides { width:8px; float:left; }
 .idea { width:944px; float:left; }
 .search { width:100%; height:32px; overflow:hidden; }
 .search table { width:200px; height:32px; float:right; }
-.header { width:944px; height:85px; background:url(../images/headerbg.jpg) no-repeat; }
+.header { width:944px; height:85px; background:url(/images/headerbg.jpg) no-repeat; }
 .logo { width:103px; height:85px; float:left; margin:0 30px 0 45px; display:inline; }
 .nav { height:24px; float:right; margin:33px 10px 0 0; }
 .nav li { float:left; line-height:24px; display:block; }
 .nav a { font-size:14px; font-weight:bold; padding:0 30px; }
 .flash { width:944px; height:286px; }
-.content { width:944px; background:#FFF url(../images/contentbg.jpg) no-repeat bottom; padding:25px 0 35px 0; }
+.content { width:944px; background:#FFF url(/images/contentbg.jpg) no-repeat bottom; padding:25px 0 35px 0; }
 .video { width:279px; float:left; margin-left:20px; display:inline; }
-.title { width:100%; height:18px; background:url(../images/navsides.gif) no-repeat left; line-height:18px; margin-bottom:10px; }
+.title { width:100%; height:18px; background:url(/images/navsides.gif) no-repeat left; line-height:18px; margin-bottom:10px; }
 .title b { margin-left:12px; font-size:14px; }
 .videoflash { width:279px; height:182px; }
 .videotitle { width:279px; margin-top:10px; }
 .products { width:285px; float:left; margin-left:32px; display:inline; }
 .products01 { width:100%; height:80px; line-height:16px; margin-bottom:21px; }
-.more { background:url(../images/plus.gif) no-repeat 0 3px; padding-left:15px; width:50px; color:#47af2f; }
+.more { background:url(/images/plus.gif) no-repeat 0 3px; padding-left:15px; width:50px; color:#47af2f; }
 .news { width:280px; float:left; margin-left:30px; display:inline; }
 .list { border-bottom:1px dotted #666666; line-height:18px; padding:2px 0; color:#666; }
 .list a { color:#666; }
@@ -47,17 +47,17 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .footernav a { margin:0 8px; }
 .copyright { float:right; }
 /*2j*/
-#bg2j { background: url(../images/2jbg.jpg) repeat-x #ebebeb; }
+#bg2j { background: url(/images/2jbg.jpg) repeat-x #ebebeb; }
 .picture { width:944px; height:136px; }
-.content2j { width:944px; background:#FFF url(../images/contentbg.jpg) no-repeat bottom; padding:15px 0 35px 0; }
+.content2j { width:944px; background:#FFF url(/images/contentbg.jpg) no-repeat bottom; padding:15px 0 35px 0; }
 .left { width:211px; margin:0 10px 100px 10px; float:left; display:inline; }
 .left span { display:block; margin-bottom:6px; }
 .leftnav { background:#eeeeee; padding:7px 10px 15px 10px; }
 .leftnav01 { height:20px; line-height:20px; font-size:14px; font-weight:bold; margin-bottom:10px; padding-left:5px; }
 .leftnav02 ul { margin-left:20px;}
-.leftnav03 li { background:url(../images/2j05.jpg) no-repeat 5px 10px; height:30px; line-height:30px; padding-left:25px; border-bottom:1px dotted #666; }
+.leftnav03 li { background:url(/images/2j05.jpg) no-repeat 5px 10px; height:30px; line-height:30px; padding-left:25px; border-bottom:1px dotted #666; }
 .right { width:649px; float:left; padding:0px 0px 60px 0px; display:inline; margin-left:20px;}
-.right p { line-height:20px; margin:12px 0px; text-indent:24px; }
+.right p { line-height:20px; margin:10px 0px; text-indent:24px; }
 .righttitle { line-height:20px; font-weight:bold; font-size:13px; color:#47af2f;}
 .righttitle01 { line-height:24px; font-weight:bold; margin:0px; padding:5px 0px; }
 .righttitle02 { line-height:24px; font-weight:bold; margin:0px; padding:5px 0px; }
@@ -65,24 +65,12 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .numeral b { color:#47af2f; margin-right:8px;}
 .togglecontent { border-top:1px solid #999; width:605px; margin:0px; padding-top:5px; }
 .togglecontent p { text-align:justify; }
-.img { text-align:center; margin:8px 0px; }
-/*.toggle { width:200px; display:inline;}
-.toggle dl dt { background: url(../images/plus.gif) no-repeat scroll 5px 10px; height:30px; width:165px; line-height:30px; cursor:pointer; margin:8px 0; padding-left:25px; display:block; border-bottom:1px dotted #666; }
-.toggle dl dt.current { background: url(../images/minus.gif) no-repeat scroll 5px 10px; }
-.toggle dl dd { padding-left:0px; line-height:30px;}
-.toggle dl dd ul { padding-bottom:5px; }
-.toggle a { color:#666;}
-.toggle a:hover { color:#47af2f; }
-.toggle01 { width:649px; height:34px; display:inline; }
-.toggle01 dl dt { background:url(../images/plus01.gif) no-repeat; height:22px; width:630px; padding-top:12px; cursor:pointer;  display:block; padding-left:19px; font-weight:bold; color:#47af2f; }
-.toggle01 dl dt.current { background:url(../images/minus01.gif) no-repeat; }
-.toggle01 dl dd { padding:5px 15px; background:url(../images/togglebg.gif) repeat-y; display: block;}
-.toggle01 dl dd ul { padding-bottom:5px; }
-.toggle01 dl dd p { line-height:22px; margin:0px; padding:5px 0px; text-indent:24px; }
-.toggle01 a { color:#47af2f;}
-.toggle01 a:hover { color:#47af2f; }
-*/
+.img { text-align:center; margin:8px 0px;}
+
 .footnote {font-size:11px !important;color:#999 !important;}
-.imgintext {width:200px; margin-left:10px; margin-bottom:10px; padding:5px; border:1px solid #ccc; text-align:center; float:right; clear:both; background-color:white;}
-.imgcentered {clear:both;margin:auto;padding:5px; border:1px solid #ccc; text-align:center; background-color:white;}
+.imgintext {width:200px; margin-left:10px; margin-bottom:10px; padding:5px; border:1px solid #ccc; text-align:center; float:right; clear:both; background-color:white; line-height:16px;}
 ul.normal li {list-style:square outside;margin-left:12px;}
+.imgintext01 {width:300px; margin-left:10px; margin-bottom:10px; padding:5px; border:1px solid #ccc; text-align:center; float:right; clear:both; background-color:white; line-height:16px;}
+.righttitle03 { line-height:26px; margin-left:12px;  +margin-left:0px; _margin-left:0px; color:#999; }
+
+.imgcentered {clear:both;margin:auto;padding:5px; border:1px solid #ccc; text-align:center; background-color:white;}

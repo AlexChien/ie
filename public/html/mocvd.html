@@ -9,23 +9,10 @@
 <script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
 <script type="text/javascript" src="/javascripts/jquery.treeview.js"></script>
 <script type="text/javascript" src="/javascripts/jquery-ui-1.8.12.custom.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/javascripts/ie.js" charset="utf-8"></script>
 <script type="text/javascript">	
-			$(document).ready(function(){
-				// get current node
-				var current_node = "mocvd"; 
-				var current_node = location.href.split('/').pop();
-				$("#navtree").treeview({animated: "fast", unique: true, persist: "location", collapsed: true});
-				// hl current element
-				$('#'+current_node).addClass('current');
-				// expand the belonging tree
-				$('#'+current_node).parent().parent().parent().find('div').click();
-				
-				jQuery('#content').accordion({
-					autoHeight: false
-					//, event: "mouseover"
-				});
-			});
-		</script>
+	$(document).ready(function(){initTreeView();});
+</script>
 </head>
 <body id="bg2j">
 <form>
@@ -56,7 +43,7 @@
             <li><img src="/images/navsides.gif" /></li>
             <li><a href="#">新闻中心</a></li>
             <li><img src="/images/navsides.gif" /></li>
-            <li><a href="#">招贤纳士</a></li>
+            <li><a href="#">人力资源</a></li>
             <li><img src="/images/navsides.gif" /></li>
             <li><a href="#">联系我们</a></li>
           </ul>
@@ -68,32 +55,32 @@
         <div class="left"><span><img src="/images/2j04.jpg" /></span><span class="leftnav">
           <!-- 左侧导航开始 -->
           <div class="leftnav01">产品与技术</div>
-          <ul id="navtree" class="navtree filetree treeview-famfamfam treeview">
-            <li><span>太阳能电池设备</span>
-              <ul>
-                <li><a href="#" id="get-to-know-solar-power">了解太阳能</a></li>
-                <li><a href="#" id="gui-ji-bo-mo">硅基薄膜层叠电池</a></li>
-                <li><a href="#" id="solar-roadmap">理想能源薄膜电池设备研发目标</a></li>
-                <li><a href="#" id="pecvd">PECVD</a></li>
-                <li><a href="#" id="lpcvd">LPCVD</a></li>
-                <li><a href="#" id="news-about-solar-energy">行业新闻</a></li>
-              </ul>
-            </li>
-            <li><span>发光二极管</span>
-              <ul>
-                <li><a href="#" id="get-to-know-led">了解发光二极管</a></li>
-                <li><a href="#" id="mocvd">MOCVD</a></li>
-                <li><a href="#" id="news-about-led">行业新闻</a></li>
-              </ul>
-            </li>
-            <li><span>授权专利</span>
-              <ul>
-                <li><a href="#" id="a1">授权专利1</a></li>
-                <li><a href="#" id="a2">授权专利2</a></li>
-                <li><a href="#" id="a3">授权专利3</a></li>
-              </ul>
-            </li>
-          </ul>
+          	<ul id="navtree" class="navtree filetree treeview-famfamfam treeview">
+				<li><span>太阳能电池设备</span>
+					<ul>
+						<li><a href="/html/get-to-know-solar-power.html" id="get-to-know-solar-power">了解太阳能</a></li>
+						<li><a href="/html/gui-ji-bo-mo.html" id="gui-ji-bo-mo">硅基薄膜层叠电池</a></li>
+						<li><a href="/html/solar-roadmap.html" id="solar-roadmap">理想能源薄膜电池设备研发目标</a></li>
+						<li><a href="/html/pecvd.html" id="pecvd">PECVD</a></li>
+						<li><a href="/html/lpcvd.html" id="lpcvd">LPCVD</a></li>
+						<li><a href="/html/news-about-solar-energy.html" id="news-about-solar-energy">行业新闻</a></li>
+					</ul>
+				</li>
+				<li><span>发光二极管</span>
+					<ul>
+						<li><a href="/html/get-to-know-led.html" id="get-to-know-led">了解发光二极管</a></li>
+						<li><a href="/html/mocvd.html" id="mocvd">MOCVD</a></li>
+						<li><a href="/html/news-about-led.html" id="news-about-led">行业新闻</a></li>
+					</ul>
+				</li>
+				<li><span>授权专利</span>
+					<ul>
+						<li><a href="#" id="a1">授权专利1</a></li>
+						<li><a href="#" id="a2">授权专利2</a></li>
+						<li><a href="#" id="a3">授权专利3</a></li>
+					</ul>
+				</li>
+			</ul>
           <!-- 左侧导航结束 -->
           </span><span><img src="/images/2j04.jpg" /></span> </div>
         <div class="right">
@@ -184,7 +171,7 @@
         <div class="blank0"></div>
       </div>
       <div class="footer">
-        <div class="footernav"><a href="about.html">关于我们</a>|<a href="/html/product.html">产品与技术</a>|<a href="#">新闻中心</a>|<a href="#">招贤纳士</a>|<a href="#">联系我们</a></div>
+        <div class="footernav"><a href="about.html">关于我们</a>|<a href="/html/product.html">产品与技术</a>|<a href="#">新闻中心</a>|<a href="#">人力资源</a>|<a href="#">联系我们</a></div>
         <div class="copyright">©2010IdealEnergy.All rights reserved</div>
         <div class="blank0"></div>
       </div>

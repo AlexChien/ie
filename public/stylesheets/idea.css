@@ -84,4 +84,5 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 */
 .footnote {font-size:11px !important;color:#999 !important;}
 .imgintext {width:200px; margin-left:10px; margin-bottom:10px; padding:5px; border:1px solid #ccc; text-align:center; float:right; clear:both; background-color:white;}
+.imgcentered {clear:both;margin:auto;padding:5px; border:1px solid #ccc; text-align:center; background-color:white;}
 ul.normal li {list-style:square outside;margin-left:12px;}

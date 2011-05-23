@@ -9,22 +9,10 @@
 		<script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
 		<script type="text/javascript" src="/javascripts/jquery.treeview.js"></script>
 		<script type="text/javascript" src="/javascripts/jquery-ui-1.8.12.custom.min.js" charset="utf-8"></script>
+		<script type="text/javascript" src="/javascripts/ie.js" charset="utf-8"></script>
 		<script type="text/javascript">	
-			$(document).ready(function(){
-				// get current node
-				var current_node = "mocvd"; 
-				var current_node = location.href.split('/').pop();
-				$("#navtree").treeview({animated: "fast", unique: true, persist: "location", collapsed: true});
-				// hl current element
-				$('#'+current_node).addClass('current');
-				// expand the belonging tree
-				$('#'+current_node).parent().parent().parent().find('div').click();
-				
-				jQuery('#content').accordion({
-					autoHeight: false
-					//, event: "mouseover"
-				});
-			});
+			var current_node = "lpcvd"; //local test
+			$(document).ready(function(){initTreeView();});
 		</script>
 		</head>
 

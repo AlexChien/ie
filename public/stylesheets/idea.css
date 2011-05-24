@@ -12,30 +12,30 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .font01:hover { color:#333333; text-decoration:none; }
 .font02 { color:#47af2f; text-decoration:none; }
 .form { border:1px solid #666666; }
-#bg { background: url(../images/idea.blue.jpg) repeat-x  #ebebeb;; }
+#bg { background: url(/images/idea.blue.jpg) repeat-x  #ebebeb;; }
 #idea { width:960px; margin:auto; }
 .sides { width:8px; float:left; }
 .idea { width:944px; float:left; }
 .search { width:100%; height:32px; overflow:hidden; }
 .search table { width:200px; height:32px; float:right; }
-.header { width:944px; height:85px; background:url(../images/headerbg.jpg) no-repeat; }
+.header { width:944px; height:85px; background:url(/images/headerbg.jpg) no-repeat; }
 .logo { width:103px; height:85px; float:left; margin:0 30px 0 45px; display:inline; }
 .nav { height:24px; float:right; margin:33px 10px 0 0; }
 .nav li { float:left; line-height:24px; display:block; }
 .nav a {  font-size:14px; font-weight:bold; padding:0 30px; }
 .flash { width:944px; height:286px; }
-.content { width:944px; background:#FFF url(../images/contentbg.jpg) no-repeat bottom; padding:25px 0 10px 0; }
+.content { width:944px; background:#FFF url(/images/contentbg.jpg) no-repeat bottom; padding:25px 0 10px 0; }
 .video { width:279px; float:left; margin-left:20px; display:inline; }
-.title { width:100%; height:18px; background:url(../images/navsides.gif) no-repeat left; line-height:18px; margin-bottom:10px; }
+.title { width:100%; height:18px; background:url(/images/navsides.gif) no-repeat left; line-height:18px; margin-bottom:10px; }
 .title b { margin-left:12px; font-size:14px; }
 .videoflash { width:279px; height:182px; }
 .videotitle { width:279px; margin-top:10px; }
 .products { width:580px; float:left; margin-left:25px; display:inline; }
 .products01 { width:100%; margin-bottom:21px; }
 .products01_a { width:190px; margin-right:3px; display:inline; float:left; }
-.products01_a_img { width:168px; height:111px; padding:11px; background:url(../images/index.img.bg.jpg) no-repeat;}
+.products01_a_img { width:168px; height:111px; padding:11px; background:url(/images/index.img.bg.jpg) no-repeat;}
 .products01_a_intro { width:174px; height:40px; line-height:20px; padding:0 8px; color:#666;}
-.more { background:url(../images/plus.gif) no-repeat 0 5px; padding-left:15px; width:50px; color:#47af2f; line-height:20px;  float:right; margin-right:8px; display:inline;}
+.more { background:url(/images/plus.gif) no-repeat 0 5px; padding-left:15px; width:50px; color:#47af2f; line-height:20px;  float:right; margin-right:8px; display:inline;}
 .news { width:280px; float:left; margin-left:25px; display:inline; }
 .list { border-bottom:1px dotted #666666; line-height:20px; padding:2px 0; color:#666;  }
 .list a { color:#666; }
@@ -50,15 +50,15 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .footernav a { margin:0 8px; }
 .copyright { float:right; }
 /*2j*/
-#bg2j { background: url(../images/2jbg.jpg) repeat-x #ebebeb; }
+#bg2j { background: url(/images/2jbg.jpg) repeat-x #ebebeb; }
 .picture { width:944px; height:136px; }
-.content2j { width:944px; background:#FFF url(../images/contentbg.jpg) no-repeat bottom; padding:15px 0 35px 0; }
+.content2j { width:944px; background:#FFF url(/images/contentbg.jpg) no-repeat bottom; padding:15px 0 35px 0; }
 .left { width:211px; margin:0 10px 100px 10px; float:left; display:inline; }
 .left span { display:block; margin-bottom:6px; }
 .leftnav { background:#eeeeee; padding:7px 10px 15px 10px; }
 .leftnav01 { height:20px; line-height:20px; font-size:14px; font-weight:bold; margin-bottom:10px; padding-left:5px; }
 .leftnav02 ul { margin-left:20px;}
-.leftnav03 li { background:url(../images/2j05.jpg) no-repeat 5px 10px; height:30px; line-height:30px; padding-left:25px; border-bottom:1px dotted #666; }
+.leftnav03 li { background:url(/images/2j05.jpg) no-repeat 5px 10px; height:30px; line-height:30px; padding-left:25px; border-bottom:1px dotted #666; }
 .right { width:649px; float:left; padding:0px 0px 60px 0px; display:inline; margin-left:20px;}
 .right p { line-height:20px; margin:10px 0px; text-indent:24px; }
 .righttitle { line-height:20px; font-weight:bold; font-size:13px; color:#47af2f;}

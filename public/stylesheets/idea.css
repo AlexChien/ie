@@ -77,3 +77,10 @@ ul.normal li {list-style:square outside;margin-left:12px;}
 .righttitle03 { line-height:26px; margin-left:12px;  +margin-left:0px; _margin-left:0px; color:#999; }
 
 .imgcentered {clear:both;margin:auto;padding:5px; border:1px solid #ccc; text-align:center; background-color:white;}
+li.current, li.current a {color:green;}
+
+/*news list*/
+.newslist li {clear:both; padding:5px 0 5px 0; border-bottom:1px dashed #cccccc; margin:15px 0; overflow:hidden;}
+.newslist li span{color:green; float:left;}
+.newslist li h1{font-size:14px; margin:0; margin-left:120px; font-weight:normal;}
+.newslist li h2{font-size:11px; margin:0; color:#666; margin-left:120px; margin-top:5px; font-weight:normal; }

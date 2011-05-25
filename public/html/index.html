@@ -15,18 +15,17 @@
 </head>
 <body id="bg">
 <div id="idea">
-  <form>
     <div class="sides"><img src="/images/idea01.blue.jpg" /></div>
     <div class="idea">
       <div class="search">
         <table width="200" border="0" cellpadding="0" cellspacing="5">
           <tr>
-            <td><input  class="form" type="text" name="textfield" id="textfield" /></td>
-            <td><a href="#"><img src="/images/search.jpg" /></a></td>
+            <td><form accept-charset="utf-8" method="get" action="/html/search.html" id="search_frm"><input id="search_input" class="form" type="search" name="q" /></form></td>
+            <td><a href="#" onclick="$('#search_frm').submit();"><img src="/images/search.jpg" /></a></td>
             <td nowrap>&nbsp;</td>
             <td nowrap><a href="#">中文</td>
             <td nowrap>|</td>
-            <td nowrap><a href="#">English</a></td>
+            <td nowrap><a class="disabled" href="#">English</a></td>
           </tr>
         </table>
       </div>
@@ -36,11 +35,11 @@
           <ul>
             <li><a class="font02">首页</a></li>
             <li><img src="/images/navsides.gif" /></li>
-            <li><a href="about.html">关于我们</a></li>
+            <li><a href="about-us.html">关于我们</a></li>
             <li><img src="/images/navsides.gif" /></li>
-            <li><a href="/html/product.html">产品与技术</a></li>
+            <li><a href="/html/get-to-know-solar-power.html">产品与技术</a></li>
             <li><img src="/images/navsides.gif" /></li>
-            <li><a href="#">新闻中心</a></li>
+            <li><a href="/html/news-company.html">新闻中心</a></li>
             <li><img src="/images/navsides.gif" /></li>
             <li><a href="#">人力资源</a></li>
             <li><img src="/images/navsides.gif" /></li>
@@ -93,18 +92,17 @@
           </div>
           </div>
           <!--新闻列表结束-->
-          <div class="more"><a class="font01" href="news">更多新闻</a></div>
+          <div class="more"><a class="font01" href="/html/news-company.html">更多新闻</a></div>
         </div>
         <div class="blank0"></div>
       </div>
       <div class="footer">
-        <div class="footernav"><a href="about.html">关于我们</a>|<a href="/html/product.html">产品与技术</a>|<a href="#">新闻中心</a>|<a href="#">人力资源</a>|<a href="#">联系我们</a></div>
+        <div class="footernav"><a href="about-us.html">关于我们</a>|<a href="/html/get-to-know-solar-power.html">产品与技术</a>|<a href="/html/news-company.html">新闻中心</a>|<a href="#">人力资源</a>|<a href="#">联系我们</a></div>
         <div class="copyright">©2010IdealEnergy.All rights reserved</div>
         <div class="blank0"></div>
       </div>
     </div>
     <div class="sides"><img src="/images/idea02.blue.jpg" /></div>
-  </form>
-</div>
+  </div>
 </body>
 </html>

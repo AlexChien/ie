@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>理想能源</title>
+<script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
 <link href="/stylesheets/idea.css" rel="stylesheet" type="text/css" />
 </head>
 
@@ -42,32 +43,20 @@
         <div class="blank0"></div>
       </div>
       <div class="picture"><img src="/images/2j03.jpg" /></div>
-      <div class="content2j">
+      <div class="content2j" id="cse">
         <div class="left"><span><img src="/images/2j04.jpg" /></span><span class="leftnav">
-          <div class="leftnav01">关于我们</div>
+          <div class="leftnav01">新闻中心</div>
           <div class="leftnav03">
             <ul>
-              <li><a href="/html/about-us.html">关于理想能源</a></li>
-              <li class="current"><a href="/html/about-history.html">大事记</a></li>
+              <li><a href="/html/news-company.html">公司新闻</a></li>
+              <li class="current"><a href="/html/news-report.html">相关报道</a></li>
+              <li><a href="#">图片集锦</a></li>
+              <li><a href="#">视频资料</a></li>
             </ul>
           </div>
           </span><span><img src="/images/2j04.jpg" /></span></div>
-         <div class="right">
-			<div class="newslist">
-				<ul>
-					<li><span>2011-05</span><h1>首台等离子体增强型化学气相沉积设备(PECVD)发货</h1></li>
-					<li><span>2011-01</span><h1>等离子体增强型化学气相沉积设备(PECVD)成功下线 </h1></li>
-					<li><span>2010-12</span><h1>理想能源MOCVD生产性样机（Alpha）研制项目被列为“2010年度上海市科委半导体照明专项”</h1></li>
-					<li><span>2010-09</span><h1>低压化学气相薄膜沉积设备（LPCVD）获得首份订单 </h1></li>
-					<li><span>2010-09</span><h1>理想能源PECVD非晶硅薄膜太阳能电池产业化关键装备研制被列为“上海2010年度科技创新启动计划”</h1></li>
-					<li><span>2010-07</span><h1>获得LPCVD软件著作权 </h1></li>
-					<li><span>2010-05</span><h1>上海市委书记俞正声一行视察理想能源 </h1></li>
-					<li><span>2010-04</span><h1>理想能源首台低压化学气相薄膜沉积设备(LPCVD)通过功能测试 </h1></li>
-					<li><span>2009-11</span><h1>被列入“2009上海市高新技术产业化项目”，高端微晶非晶双结薄膜太阳能电池商用关键生产设备：PECVD和LPCVD的开发和大规模生产 </h1></li>
-					<li><span>2009-08</span><h1>理想能源设备（上海）有限公司成立</h1></li>
-					<li><span>2009-07</span><h1>“聚焦张江十周年创新创业风云榜”中被评为“最具成长潜力奖” </h1></li>
-				</ul>
-			</div>
+         <div class="right" >
+			
         </div> 
          <div class="blank0"></div>
       </div>
@@ -79,5 +68,29 @@
     </div>
     <div class="sides"><img src="/images/2j02.jpg" /></div>
   </div>
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">
+function querySt(ji) {
+	hu = window.location.search.substring(1);
+	gy = hu.split("&");
+	for (i=0;i<gy.length;i++) {
+		ft = gy[i].split("=");
+		if (ft[0] == ji) {
+			return ft[1];
+		}
+	}
+}
+cse_inited = true;
+google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.GREENSKY});
+google.setOnLoadCallback(function() {
+	var customSearchControl = new google.search.CustomSearchControl('008039657822625578505:z21dowvpmlg');
+	// var customSearchControl = new google.search.CustomSearchControl('008039657822625578505:60pqrtf_wbi');
+	customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+	var options = new google.search.DrawOptions();
+	options.setSearchFormRoot('cse-search-form');
+	customSearchControl.draw('cse',options);
+	customSearchControl.execute(querySt("q"));
+	}, true);
+</script>
 </body>
 </html>

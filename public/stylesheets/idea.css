@@ -34,7 +34,7 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .products01_a { width:190px; margin-right:3px; display:inline; float:left; }
 .products01_a_img { width:164px; height:109px; padding:12px 13px; background:url(/images/index.img.jpg) no-repeat; }
 .products01_a_intro { width:174px; height:40px; line-height:20px; padding:0 8px; color:#666; }
-.more { background:url(/images/plus.gif) no-repeat 0 5px; padding-left:15px; width:50px; color:#47af2f; line-height:20px; float:right; margin-right:8px; display:inline; }
+.more { background:url(/images/plus.gif) no-repeat 0 5px; padding-left:15px; width:50px; margin-top:1.2em; color:#47af2f; line-height:20px; float:right; margin-right:8px; display:inline; }
 .news { width:280px; float:left; margin-left:25px; display:inline; }
 .list { border-bottom:1px dotted #666666; line-height:20px; padding:2px 0; color:#666; }
 .list a { color:#666; }

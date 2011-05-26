@@ -20,9 +20,8 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .search table { width:200px; height:32px; float:right; }
 .header { width:944px; height:85px; background:url(/images/headerbg.jpg) no-repeat; }
 .logo { width:130px; height:85px; float:left; margin:0 30px 0 35px; display:inline; }
-.nav { height:24px; float:right; margin:36px 10px 0 0; }
-.nav li { float:left; line-height:24px; display:block; }
-.nav a { font-size:14px; font-weight:bold; padding:0 30px; }
+
+
 .flash { width:944px; height:286px; }
 .content { width:944px; background:#FFF url(/images/contentbg.jpg) no-repeat bottom; padding:25px 0 10px 0; }
 .video { width:279px; float:left; margin-left:20px; display:inline; }
@@ -87,3 +86,20 @@ a.disabled { color:#999; }
 .newslist li h2 { font-size:11px; margin:0; color:#666; margin-left:120px; margin-top:5px; font-weight:normal; }
 /*cse*/
 .gsc-adBlock, .gsc-adBlockVertical { display:none !important; }
+/*menu*/
+#nav {height:28px; float:right; margin:36px 0px 0 0; width:730px; display:block;}
+#nav .jquery_out {float:left;line-height:28px;display:block; border-right:0px solid #fff; text-align:center; color:#fff;font:18px/32px "微软雅黑"; background:#062723 url(/images/slide-panel_03.png) 0 0 repeat-x;}
+#nav .jquery_out .smile {padding-left:1em;}
+#nav .jquery_inner {margin-left:16px;}
+#nav .jquery {margin-right:1px;padding:0 2em;}
+#nav .mainlevel { float:left; border-right:0px solid #fff; width:110px;/*IE6 only*/}
+#nav .mainlevel01 { float:left;  width:4px;/*IE6 only*/}
+#nav .mainlevel a {color:#333; text-decoration:none; line-height:28px; display:block; padding:0 0px; width:110px; text-align:center; font-size:14px; font-weight:bold;  }
+#nav .mainlevel a:hover {color:#333; text-decoration:none; }
+#nav .mainlevel ul {display:none; position:absolute;}
+#nav .mainlevel li {border-top:1px solid #fff; background:#62f545; width:110px;/*IE6 only*/ }
+.log {text-align:center; color:skyblue; line-height:28px; text-transform:capitalize; margin:50px auto;}
+.clear {clear:both; *display:inline;/*IE only*/}
+.mainlevel02 { float:left; border-right:0px solid #fff; width:110px;/*IE6 only*/ color:#47b030; font-size:14px; font-weight:bold; text-align:center; line-height:28px; }
+
+

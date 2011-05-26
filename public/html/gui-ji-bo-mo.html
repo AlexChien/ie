@@ -10,6 +10,7 @@
 <script type="text/javascript" src="/javascripts/jquery.treeview.js"></script>
 <script type="text/javascript" src="/javascripts/jquery-ui-1.8.12.custom.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/javascripts/ie.js" charset="utf-8"></script>
+<script type="text/javascript" src="/javascripts/slide.js"></script>
 <script type="text/javascript">	
 			$(document).ready(function(){initTreeView();});
 		</script>
@@ -34,22 +35,37 @@
     </div>
     <div class="header">
       <div class="logo"><a href="index.html"><img src="/images/logo.jpg" /></a></div>
-      <div class="nav">
-        <ul>
-          <li><a href="/html/index.html">首页</a></li>
-          <li><img src="/images/navsides.gif" /></li>
-          <li><a href="about-us.html">关于我们</a></li>
-          <li><img src="/images/navsides.gif" /></li>
-          <li><a class="font02">产品与技术</a></li>
-          <li><img src="/images/navsides.gif" /></li>
-          <li><a href="/html/news-company.html">新闻中心</a></li>
-          <li><img src="/images/navsides.gif" /></li>
-          <li><a href="#">人力资源</a></li>
-          <li><img src="/images/navsides.gif" /></li>
-          <li><a href="#">联系我们</a></li>
+     <!--导航-->
+      <div >
+        <ul id="nav">
+          <li class="mainlevel" id="mainlevel_01"><a href="/html/index.html">首页</a> </li>
+          <li class="mainlevel01"><img src="../images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_02"><a href="/html/about-us.html" >关于我们</a>
+            <ul id="sub_02">
+              <li><a style="font-size:12px; " href="/html/about-us.html" >关于理想能源</a></li>
+              <li><a style="font-size:12px; "  href="/html/about-history.html" >大事记</a></li>
+            </ul>
+          </li>
+          <li class="mainlevel01"><img src="../images/navsides.gif" /></li>
+          <li class="mainlevel02" id="mainlevel_03">产品与技术 </li>
+          <li class="mainlevel01"><img src="../images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_04"><a href="/html/news-company.html" >新闻中心</a>
+            <ul id="sub_04">
+              <li><a style="font-size:12px; "  href="/html/news-company.html" >公司新闻</a></li>
+              <li><a style="font-size:12px; "  href="/html/news-report.html">相关报道</a></li>
+              <li><a style="font-size:12px; "  href="#" >图片集锦</a></li>
+              <li><a style="font-size:12px; "  href="#" >视频资料</a></li>
+            </ul>
+          </li>
+          <li class="mainlevel01"><img src="../images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_05"><a href="#" >人力资源</a> </li>
+          <li class="mainlevel01"><img src="../images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_06"><a href="#" >联系我们</a> </li>
+          <div class="clear"></div>
         </ul>
       </div>
       <div class="blank0"></div>
+      <!--导航结束-->
     </div>
     <div class="picture"><img src="/images/2j03.blue.jpg" /></div>
     <div class="content2j">

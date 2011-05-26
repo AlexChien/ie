@@ -7,6 +7,7 @@
 <link href="/stylesheets/idea.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
 <script src="/javascripts/jquery.colorbox.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="/javascripts/slide.js"></script>
 <script type="text/javascript" charset="utf-8">
 	$(document).ready(function(){
 		$(".cb").colorbox({iframe:true, innerWidth:480, innerHeight:370});
@@ -15,22 +16,25 @@
 </head>
 <body id="bg">
 <div id="idea">
-    <div class="sides"><img src="/images/idea01.blue.jpg" /></div>
-    <div class="idea">
-      <div class="search">
-        <table width="200" border="0" cellpadding="0" cellspacing="5">
-          <tr>
-            <td><form accept-charset="utf-8" method="get" action="/html/search.html" id="search_frm"><input id="search_input" class="form" type="search" name="q" /></form></td>
-            <td><a href="#" onClick="$('#search_frm').submit();"><img src="/images/search.jpg" /></a></td>
-            <td nowrap>&nbsp;</td>
-            <td nowrap><a href="#">中文</td>
-            <td nowrap>|</td>
-            <td nowrap><a class="disabled" href="#">English</a></td>
-          </tr>
-        </table>
-      </div>
-      <div class="header">
-        <div class="logo"><a href="index.html"><img src="/images/logo.jpg" /></a></div>
+  <div class="sides"><img src="/images/idea01.blue.jpg" /></div>
+  <div class="idea">
+    <div class="search">
+      <table width="200" border="0" cellpadding="0" cellspacing="5">
+        <tr>
+          <td><form accept-charset="utf-8" method="get" action="/html/search.html" id="search_frm">
+              <input id="search_input" class="form" type="search" name="q" />
+            </form></td>
+          <td><a href="#" onClick="$('#search_frm').submit();"><img src="/images/search.jpg" /></a></td>
+          <td nowrap>&nbsp;</td>
+          <td nowrap><a href="#">中文</td>
+          <td nowrap>|</td>
+          <td nowrap><a class="disabled" href="#">English</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="header">
+      <div class="logo"><a href="index.html"><img src="/images/logo.jpg" /></a></div>
+      <!--
         <div class="nav">
           <ul>
             <li><a class="font02">首页</a></li>
@@ -47,62 +51,99 @@
           </ul>
         </div>
         <div class="blank0"></div>
+      </div>-->
+      <!--导航-->
+      <div >
+        <ul id="nav">
+          <li class="mainlevel02" id="mainlevel_01">首页</li>
+          <li class="mainlevel01"><img src="/images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_02"><a href="about-us.html" >关于我们</a>
+            <ul id="sub_02">
+              <li><a style="font-size:12px; " href="/html/about-us.html" >关于理想能源</a></li>
+              <li><a style="font-size:12px; "  href="/html/about-history.html" >大事记</a></li>
+            </ul>
+          </li>
+          <li class="mainlevel01"><img src="/images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_03"><a href="/html/get-to-know-solar-power.html" >产品与技术</a>
+            <ul id="sub_03">
+              <li><a style="font-size:12px; "   href="/html/get-to-know-solar-power.html" >太阳能电池设备</a></li>
+              <li><a style="font-size:12px; "  href="/html/get-to-know-led.html" >发光二极管</a></li>
+              <li><a style="font-size:12px; "  href="#" >授权专利</a></li>
+            </ul>
+          </li>
+          <li class="mainlevel01"><img src="/images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_04"><a href="/html/news-company.html" >新闻中心</a>
+            <ul id="sub_04">
+              <li><a style="font-size:12px; "  href="/html/news-company.html" >公司新闻</a></li>
+              <li><a style="font-size:12px; "  href="/html/news-report.html">相关报道</a></li>
+              <li><a style="font-size:12px; "  href="#" >图片集锦</a></li>
+              <li><a style="font-size:12px; "  href="#" >视频资料</a></li>
+            </ul>
+          </li>
+          <li class="mainlevel01"><img src="/images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_05"><a href="#" >人力资源</a> </li>
+          <li class="mainlevel01"><img src="/images/navsides.gif" /></li>
+          <li class="mainlevel" id="mainlevel_06"><a href="#" >联系我们</a> </li>
+          <div class="clear"></div>
+        </ul>
       </div>
-      <div class="flash"><img src="/images/flash02.jpg" /></div>
-      <div class="content">
-        <div class="products" >
-          <div class="title"><b>产品与技术</b></div>
-          <div class="products01">
-            <div class="products01_a">
-              <div class="products01_a_img"><a href="lpcvd.html"><img src="/images/index.lpcvd.jpg"></a></div>
-              <div class="products01_a_intro">非晶-微晶叠层硅薄膜太阳能电池制造设备 LPCVD</div>
-              <div class="more"><a class="font01" href="lpcvd.html">详细信息</a></div>
-            </div>
-            <div class="products01_a">
-              <div class="products01_a_img"><a href="pecvd.html"><img src="/images/index.pecvd.jpg"></a></div>
-              <div class="products01_a_intro">非晶-微晶叠层硅薄膜太阳能电池制造设备 PECVD</div>
-              <div class="more"><a class="font01" href="pecvd.html">详细信息</a></div>
-            </div>
-            <div class="products01_a">
-              <div class="products01_a_img"><a href="mocvd.html"><img src="/images/index.mocvd.jpg"></a></div>
-              <div class="products01_a_intro">发光二极管制造设备 MOCVD</div>
-              <div class="more"><a class="font01" href="mocvd.html">详细信息</a></div>
-            </div>
+      <!--导航结束-->
+    </div>
+    <div class="flash"><img src="/images/flash02.jpg" /></div>
+    <div class="content">
+      <div class="products" >
+        <div class="title"><b>产品与技术</b></div>
+        <div class="products01">
+          <div class="products01_a">
+            <div class="products01_a_img"><a href="lpcvd.html"><img src="/images/index.lpcvd.jpg"></a></div>
+            <div class="products01_a_intro">非晶-微晶叠层硅薄膜太阳能电池制造设备 LPCVD</div>
+            <div class="more"><a class="font01" href="lpcvd.html">详细信息</a></div>
+          </div>
+          <div class="products01_a">
+            <div class="products01_a_img"><a href="pecvd.html"><img src="/images/index.pecvd.jpg"></a></div>
+            <div class="products01_a_intro">非晶-微晶叠层硅薄膜太阳能电池制造设备 PECVD</div>
+            <div class="more"><a class="font01" href="pecvd.html">详细信息</a></div>
+          </div>
+          <div class="products01_a">
+            <div class="products01_a_img"><a href="mocvd.html"><img src="/images/index.mocvd.jpg"></a></div>
+            <div class="products01_a_intro">发光二极管制造设备 MOCVD</div>
+            <div class="more"><a class="font01" href="mocvd.html">详细信息</a></div>
+          </div>
+          <div class="blank0"></div>
+        </div>
+      </div>
+      <div class="news">
+        <div class="title"><b>最新动态</b></div>
+        <!--新闻列表-->
+        <div style="height:173px; ">
+          <div class="list"><span>2011-01</span><span class="line">|</span><span class="newstitle"><a href="#">等离子体增强型化学气相沉积设备(PECVD)成功下线</a></span>
+            <div class="blank0"></div>
+          </div>
+          <div class="list"><span>2010-09</span><span class="line">|</span><span class="newstitle"><a href="#">LPCVD获得首份订单</a></span>
+            <div class="blank0"></div>
+          </div>
+          <div class="list"><span>2010-05</span><span class="line">|</span><span class="newstitle"><a href="#">上海市委书记俞正声一行视察理想能源</a></span>
+            <div class="blank0"></div>
+          </div>
+          <div class="list"><span>2010-04</span><span class="line">|</span><span class="newstitle"><a href="#">理想能源首台LPCVD设备通过功能测试</a></span>
+            <div class="blank0"></div>
+          </div>
+          <div class="list"><span>2009-08</span><span class="line">|</span><span class="newstitle"><a href="#">理想能源设备（上海）有限公司成立</a></span>
             <div class="blank0"></div>
           </div>
         </div>
-        <div class="news">
-          <div class="title"><b>最新动态</b></div>
-          <!--新闻列表-->
-          <div style="height:173px; ">
-            <div class="list"><span>2011-01</span><span class="line">|</span><span class="newstitle"><a href="#">等离子体增强型化学气相沉积设备(PECVD)成功下线</a></span>
-              <div class="blank0"></div>
-            </div>
-            <div class="list"><span>2010-09</span><span class="line">|</span><span class="newstitle"><a href="#">LPCVD获得首份订单</a></span>
-              <div class="blank0"></div>
-            </div>
-            <div class="list"><span>2010-05</span><span class="line">|</span><span class="newstitle"><a href="#">上海市委书记俞正声一行视察理想能源</a></span>
-              <div class="blank0"></div>
-            </div>
-            <div class="list"><span>2010-04</span><span class="line">|</span><span class="newstitle"><a href="#">理想能源首台LPCVD设备通过功能测试</a></span>
-              <div class="blank0"></div>
-            </div>
-            <div class="list"><span>2009-08</span><span class="line">|</span><span class="newstitle"><a href="#">理想能源设备（上海）有限公司成立</a></span>
-              <div class="blank0"></div>
-            </div>
-          </div>
-          <!--新闻列表结束-->
-          <div class="more"><a class="font01" href="/html/news-company.html">更多新闻</a></div>
-        </div>
-        <div class="blank0"></div>
+        <!--新闻列表结束-->
+        <div class="more"><a class="font01" href="/html/news-company.html">更多新闻</a></div>
       </div>
-      <div class="footer">
-        <div class="footernav"><a href="about-us.html">关于我们</a>|<a href="/html/get-to-know-solar-power.html">产品与技术</a>|<a href="/html/news-company.html">新闻中心</a>|<a href="#">人力资源</a>|<a href="#">联系我们</a></div>
-        <div class="copyright">©2010IdealEnergy.All rights reserved</div>
-        <div class="blank0"></div>
-      </div>
+      <div class="blank0"></div>
     </div>
-    <div class="sides"><img src="/images/idea02.blue.jpg" /></div>
+    <div class="footer">
+      <div class="footernav"><a href="about-us.html">关于我们</a>|<a href="/html/get-to-know-solar-power.html">产品与技术</a>|<a href="/html/news-company.html">新闻中心</a>|<a href="#">人力资源</a>|<a href="#">联系我们</a></div>
+      <div class="copyright">©2010IdealEnergy.All rights reserved</div>
+      <div class="blank0"></div>
+    </div>
   </div>
+  <div class="sides"><img src="/images/idea02.blue.jpg" /></div>
+</div>
 </body>
 </html>

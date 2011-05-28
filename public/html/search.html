@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>理想能源</title>
 <script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="/javascripts/ie.js"></script>
 <script type="text/javascript" src="/javascripts/slide.js"></script>
 <link href="/stylesheets/idea.css" rel="stylesheet" type="text/css" />
 </head>
@@ -51,8 +52,8 @@
             <ul id="sub_04">
               <li><a style="font-size:12px; "  href="/html/news-company.html" >公司新闻</a></li>
               <li><a style="font-size:12px; "  href="/html/news-report.html">相关报道</a></li>
-              <li><a style="font-size:12px; "  href="#" >图片集锦</a></li>
-              <li><a style="font-size:12px; "  href="#" >视频资料</a></li>
+              <li><a style="font-size:12px; "  href="/html/news-pics.html" >图片集锦</a></li>
+              <li><a style="font-size:12px; "  href="/html/news-video.html" >视频资料</a></li>
             </ul>
           </li>
           <li class="mainlevel01"><img src="../images/navsides.gif" /></li>
@@ -72,8 +73,8 @@
           <ul>
             <li><a href="/html/news-company.html">公司新闻</a></li>
             <li class="current"><a href="/html/news-report.html">相关报道</a></li>
-            <li><a href="#">图片集锦</a></li>
-            <li><a href="#">视频资料</a></li>
+            <li><a href="/html/news-pics.html">图片集锦</a></li>
+            <li><a href="/html/news-video.html">视频资料</a></li>
           </ul>
         </div>
         </span><span><img src="/images/2j04.jpg" /></span></div>
@@ -90,16 +91,7 @@
 </div>
 <script src="http://www.google.com/jsapi" type="text/javascript"></script>
 <script type="text/javascript">
-function querySt(ji) {
-	hu = window.location.search.substring(1);
-	gy = hu.split("&");
-	for (i=0;i<gy.length;i++) {
-		ft = gy[i].split("=");
-		if (ft[0] == ji) {
-			return ft[1];
-		}
-	}
-}
+
 cse_inited = true;
 google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.GREENSKY});
 google.setOnLoadCallback(function() {

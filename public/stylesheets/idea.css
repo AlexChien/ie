@@ -103,6 +103,8 @@ a.disabled { color:#999; }
 .newslist li span { color:green; float:left; line-height:20px; display:block; }
 .newslist li h1 { font-size:14px; margin:0; margin-left:120px; font-weight:normal; line-height:20px; }
 .newslist li h2 { font-size:11px; margin:0; color:#666; margin-left:120px; margin-top:5px; font-weight:normal; }
+.image_thumb_list {margin-left:120px;}
+.image_thumb_list img {margin-top:5px; border:1px solid #ccc; padding:2px;}
 /*cse*/
 .gsc-adBlock, .gsc-adBlockVertical { display:none !important; }
 /*menu*/

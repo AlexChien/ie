@@ -5,6 +5,7 @@
 	<title>新闻联播</title>
 	<meta name="generator" content="TextMate http://macromates.com/">
 	<meta name="author" content="Alex Chien">
+	<script type="text/javascript" src="/javascripts/ie.js"></script>
 	<style type="text/css" media="screen">
 		html,body{margin:0px;padding:0px;}
 	</style>
@@ -12,17 +13,17 @@
 </head>
 <body>
 	<!-- START OF THE PLAYER EMBEDDING TO COPY-PASTE --> 
-	<div id="mediaplayer"><h1>2010年8月8日新闻联播－理想能源</h1><img src="/swf/poster.jpg" /></div> 
+	<div id="mediaplayer">视频载入中，请稍候...</div> 
 
 	<script type="text/javascript" src="/javascripts/jwplayer.js"></script> 
-	<script type="text/javascript"> 
+	<script type="text/javascript">
+	var swf = "/swf/"+ querySt("file");
 	jwplayer("mediaplayer").setup({
 		flashplayer: "/swf/player.swf",
 		width: "480",
 		height: "360",
 		autostart: 'true',
-		file: "/swf/news-20100808.mp4",
-		image: "/swf/poster.jpg"
+		file: "/swf/"+querySt("file")
 	});
 	</script> 
 	<!-- END OF THE PLAYER EMBEDDING -->

@@ -5,6 +5,7 @@
 <title>理想能源</title>
 <link href="/stylesheets/idea.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="/javascripts/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="/javascripts/ie.js"></script>
 <script type="text/javascript" src="/javascripts/slide.js"></script>
 </head>
 <body id="bg2j">
@@ -156,13 +157,16 @@
         </div>
         </span><span><img src="/images/2j04.jpg" /></span></div>
       <div class="right">
-        <div>
-          <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="640" height="500">
-            <param name="movie" value="/swf/gallery.swf" />
-            <param name="quality" value="high" />
-            <param name="wmode" value="transparent">
-            <embed src="/swf/gallery.swf" width="640" height="500" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" wmode="transparent"></embed>
-          </object>
+        <div id="gallery_holder">
+			<script type="text/javascript" src="/javascripts/swfobject.js"></script> 
+			<script type="text/javascript">
+				var xml = "/xml/"+ querySt("xmlurl");
+				var so = new SWFObject("/swf/gallery.swf", "gallery", "640", "500", "8", "#336699");
+				   so.addParam("quality", "high");
+				   so.addParam("wmode", "transparent");
+				   so.addVariable("xmlurl",xml);
+				   so.write("gallery_holder");
+			</script>
         </div>
       </div>
       <div class="blank0"></div>

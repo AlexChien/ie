@@ -19,7 +19,7 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .search { width:100%; height:32px; overflow:hidden; }
 .search table { width:200px; height:32px; float:right; }
 .header { width:944px; height:85px; background:url(/images/headerbg.jpg) no-repeat; }
-.logo { width:130px; height:85px; float:left; margin:0 30px 0 35px; display:inline; }
+.logo { width:290px; height:85px; float:left; margin:0 0px 0 10px; display:inline; }
 
 
 .flash { width:944px; height:286px; }
@@ -128,14 +128,14 @@ a.disabled { color:#999; }
 .form01 {width:80px; height:20px; line-height:20px; padding-left:4px;}
 .form02 {width:250px; line-height:18px; padding-left:4px;}
 /* common styling */
-.menu { font-family: "宋体"; width:700px; position:relative; margin:0; font-size:12px; margin:38px 0 0 0; float:right; }
-.menu ul li a, .menu ul li a:visited { display:block; text-decoration:none; color:#000; width:110px; height:28px; text-align:center; color:#333; border-right:1px solid #e9e9e9; border-left:1px solid #e9e9e9; line-height:28px; font-size:12px; overflow:hidden; }
+.menu { font-family: "宋体"; width:620px; position:relative; margin:0; font-size:12px; margin:38px 0 0 0; float:right; }
+.menu ul li a, .menu ul li a:visited { display:block; text-decoration:none; color:#000; width:100px; height:28px; text-align:center; color:#333; border-right:1px solid #e9e9e9; border-left:1px solid #e9e9e9; line-height:28px; font-size:12px; overflow:hidden; }
 .menu ul { padding:0px 0 0 0; margin:0; list-style-type: none; }
 .menu ul li { float:left; margin-right:0px; position:relative; }
 .menu ul li ul { display: none; }
 .dazi { font-size:14px; }
-.opt { background:url(/images/menu_bg.jpg); width:110px; height:28px; line-height:28px; text-align:center; color:#FFF; font-size:14px; font-weight:bold; border-right:1px solid #e9e9e9;}
-.opt01 { width:110px; height:28px; line-height:28px; text-align:center; color:#47b030; font-size:14px; font-weight:bold; border-right:1px solid #e9e9e9;  border-left:1px solid #e9e9e9;}
+.opt { background:url(/images/menu_bg.jpg); width:100px; height:28px; line-height:28px; text-align:center; color:#FFF; font-size:14px; font-weight:bold; border-right:1px solid #e9e9e9;}
+.opt01 { width:100px; height:28px; line-height:28px; text-align:center; color:#47b030; font-size:14px; font-weight:bold; border-right:1px solid #e9e9e9;  border-left:1px solid #e9e9e9;}
 /* specific to non IE browsers */
 .menu ul li:hover a { color:#fff; background:url(/images/menu_bg.jpg); }
 .menu ul li:hover ul { display:block; position:absolute; top:28px; left:6; width:105px; }
@@ -144,8 +144,8 @@ a.disabled { color:#999; }
 .menu ul li:hover ul li ul { display: none; }
 .menu ul li:hover ul li a { display:block; background: url(/images/menu01_bg.jpg); color:#333; height:25px; line-height:25px; }
 .menu ul li:hover ul li a:hover { background: url(/images/menu02_bg.jpg); color:#fff; height:25px; line-height:25px; }
-.menu ul li:hover ul li:hover ul { display:block; position:absolute; left:111px; top:0; }
-.menu ul li:hover ul li:hover ul.left { left:-111px; }
+.menu ul li:hover ul li:hover ul { display:block; position:absolute; left:101px; top:0; }
+.menu ul li:hover ul li:hover ul.left { left:-101px; }
 
 
 .menu ul li a.hide, .menu ul li a:visited.hide {_display:none; /*IE6 only*/}
@@ -157,8 +157,8 @@ a.disabled { color:#999; }
 .menu ul li a:hover ul li a {display:block; background: url(/images/menu01_bg.jpg); color:#333; height:25px; line-height:25px; }
 .menu ul li a:hover ul li a ul {visibility:hidden; } 
 .menu ul li a:hover ul li a:hover {background: url(/images/menu02_bg.jpg); color:#fff; height:25px; line-height:25px;}
-.menu ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; left:111px; top:0; color:#000; }
-.menu ul li a:hover ul li a:hover ul.left {left:-111px;}
+.menu ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; left:101px; top:0; color:#000; }
+.menu ul li a:hover ul li a:hover ul.left {left:-101px;}
 
 
 

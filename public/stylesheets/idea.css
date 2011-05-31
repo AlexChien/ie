@@ -76,6 +76,8 @@ ul.normal li { list-style:square outside; margin-left:12px; }
 .imgintext02 { width:200px; margin:10px 20px 20px 20px; float:left; padding:5px; text-align:center; background-color:white; line-height:16px; border-bottom:2px solid #cbc9bd; border-right:2px solid #cbc9bd; border-top:1px solid #ebe8d7; border-left:1px solid #ebe8d7; display:inline;}
 .righttitle03 { line-height:26px; margin-left:12px; +margin-left:0px;
 _margin-left:0px; color:#999; }
+.imgintext02a { width:190px; margin:10px 5px 20px 5px; float:left; padding:5px; text-align:center; background-color:white; line-height:16px; border-bottom:2px solid #cbc9bd; border-right:2px solid #cbc9bd; border-top:1px solid #ebe8d7; border-left:1px solid #ebe8d7; display:inline;}
+.imgintext02b { width:190px; margin:10px 5px 0px 5px; float:left; padding:5px; text-align:center; background-color:white; line-height:16px; border-bottom:2px solid #cbc9bd; border-right:2px solid #cbc9bd; border-top:1px solid #ebe8d7; border-left:1px solid #ebe8d7; display:inline;}
 .imgcentered { clear:both; margin:auto; padding:5px; border-bottom:2px solid #cbc9bd; border-right:2px solid #cbc9bd; border-top:1px solid #ebe8d7; border-left:1px solid #ebe8d7; text-align:center; background-color:white; }
 .rmtable { line-height:24px; text-align:center; background:#dfd9c3; margin:20px 0px 0 25px;}
 .rmtable01 { background:#dfd9c3; margin:20px 0px 0 0px; height:41px; background:url(/imagesformbg.jpg) ;}

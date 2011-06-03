@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<img src="/images/2010expo/0.jpg" width="500" height="334" />
-<img src="/images/2010expo/01.jpg" width="500" height="334" />
-<img src="/images/2010expo/02.jpg" width="500" height="334" />
-<img src="/images/2010expo/03.jpg" width="500" height="334" />
-<img src="/images/2010expo/04.jpg" width="500" height="334" />
-<img src="/images/2010expo/05.jpg" width="500" height="334" />
-<img src="/images/2010expo/06.jpg" width="500" height="334" />
-<img src="/images/2010expo/07.jpg" width="500" height="334" />
-<img src="/images/2010expo/08.jpg" width="500" height="334" />
-<img src="/images/2010expo/10.jpg" width="500" height="334" />
-<img src="/images/2010expo/11.jpg" width="500" height="334" />
-<img src="/images/2010expo/12.jpg" width="500" height="334" />
+<data>
+	<img src="/images/2010expo/0.jpg" width="500" height="334" />
+	<img src="/images/2010expo/01.jpg" width="500" height="334" />
+	<img src="/images/2010expo/02.jpg" width="500" height="334" />
+	<img src="/images/2010expo/03.jpg" width="500" height="334" />
+	<img src="/images/2010expo/04.jpg" width="500" height="334" />
+	<img src="/images/2010expo/05.jpg" width="500" height="334" />
+	<img src="/images/2010expo/06.jpg" width="500" height="334" />
+	<img src="/images/2010expo/07.jpg" width="500" height="334" />
+	<img src="/images/2010expo/08.jpg" width="500" height="334" />
+	<img src="/images/2010expo/10.jpg" width="500" height="334" />
+	<img src="/images/2010expo/11.jpg" width="500" height="334" />
+	<img src="/images/2010expo/12.jpg" width="500" height="334" />
+</data>

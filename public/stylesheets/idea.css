@@ -106,8 +106,18 @@ a.disabled { color:#999; }
 .newslist li span { color:green; float:left; line-height:20px; display:block; }
 .newslist li h1 { font-size:14px; margin:0; margin-left:120px; font-weight:normal; line-height:20px; }
 .newslist li h2 { font-size:11px; margin:0; color:#666; margin-left:120px; margin-top:5px; font-weight:normal; }
-.image_thumb_list {margin-left:120px;}
+.image_thumb_list {margin-left:120px;position:relative;width:320px;}
 .image_thumb_list img {margin-top:5px; border:1px solid #ccc; padding:2px;}
+.image_thumb_list .play {
+	background: url("/images/play.png") no-repeat scroll center center transparent;
+	cursor: pointer;
+	height: 71px;
+	right: 0px;
+	position: absolute;
+	top: 10px;
+	width: 71px;
+	z-index: 2;
+}
 /*cse*/
 .gsc-adBlock, .gsc-adBlockVertical { display:none !important; }
 /*menu*/
@@ -159,3 +169,5 @@ a.disabled { color:#999; }
 .menu ul li a:hover ul li a:hover {background: url(/images/menu02_bg.jpg); color:#fff; height:25px; line-height:25px;}
 .menu ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; left:101px; top:0; color:#000; }
 .menu ul li a:hover ul li a:hover ul.left {left:-101px;}
+
+

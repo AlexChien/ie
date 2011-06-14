@@ -170,4 +170,12 @@ a.disabled { color:#999; }
 .menu ul li a:hover ul li a:hover ul {visibility:visible; position:absolute; left:101px; top:0; color:#000; }
 .menu ul li a:hover ul li a:hover ul.left {left:-101px;}
 
-
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    background: url("images/ui-bg_highlight-hard_15_459e00_1x100.png") repeat-x scroll 50% 50% #459E00;
+    border: 1px solid #D4CCB0;
+    color: white;
+    font-weight: bold;
+}
+.ui-state-default a, .ui-widget-content .ui-state-default a, .ui-widget-header .ui-state-default a {
+    color: white !important;
+}

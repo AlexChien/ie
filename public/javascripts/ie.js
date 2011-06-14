@@ -9,7 +9,10 @@ function initTreeView(){
 		//, event: "mouseover"
 	});
 	
-	
+	// handle in-page panel navigation
+	// $('#navtree a').each(function(){
+	// 	
+	// });
 	// expand the belonging tree
 	// setTimeout(function(){$('#'+current_node).parent().parent().parent().find('div').click();},1000);
 }

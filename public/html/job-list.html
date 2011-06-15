@@ -157,7 +157,7 @@
         <p>作为一家国际性公司，多元的文化背景和研发世界顶尖科技产品所带来的成就，激励着每一个员工奋发努力，不断进取。公司提供系统的在职培训和即时的相互交流，帮助员工提升个人价值；与此同时，公司也提供极具竞争力的薪资待遇和福利。</p>
         <p>如果您想完成为地球提供理想能源的使命，加入理想能源！</p>
         <div>
-          <form>
+          <form id="job_search" action="" onsubmit="javascript:$('#job_list').html('暂无职位。').css('text-align','center').show();return false;" method="post">
             <table class="rmtable01" width="100%" border="0">
               <tr>
                 <td width="6%"></td>
@@ -188,12 +188,12 @@
                     &nbsp;
                   </select></td>
                 <td width="46%"><input class="form02" value="请输入职位..." onFocus="if (value ==this.defaultValue){value =''}" onBlur="if (value ==''){value=this.defaultValue}" name="" type="text"></td>
-                <td width="15%"><a href="/html/#"><img src="/images/search01.jpg"></a></td>
+                <td width="15%"><a href="javascript:void($('#job_search').submit());"><img src="/images/search01.jpg"></a></td>
                 <td width="3%">&nbsp;</td>
               </tr>
             </table>
           </form>
-          <div class="job">
+          <div id="job_list" class="job" style="display:none;">
             <ul>
               <li><span>Position: Cost Accounting Supervisor <a>职位：成本主管</a></span><span style="float:right;"><a href="/html/job-details.html">详细信息</a></span>
                 <div class="blank0"></div>

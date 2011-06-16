@@ -11,6 +11,7 @@
 <script type="text/javascript" src="/javascripts/jquery-ui-1.8.12.custom.min.js" charset="utf-8"></script>
 <script type="text/javascript" src="/javascripts/ie.js" charset="utf-8"></script>
 <script type="text/javascript" src="/javascripts/slide.js"></script>
+<script src="../../Scripts/swfobject_modified.js" type="text/javascript"></script>
 <script type="text/javascript">	
 	$(document).ready(function(){initTreeView();});
 </script>
@@ -155,7 +156,7 @@
         <!-- 左侧导航开始 -->
         <div class="leftnav01">产品与技术</div>
         <ul id="navtree" class="navtree filetree treeview-famfamfam treeview">
-          <li><span><a href="/html/get-to-know-solar-power.html">太阳能电池设备</a></span>
+          <li><span><a style="color:green;  font-weight:bold;" href="/html/get-to-know-solar-power.html" >太阳能电池设备</a></span>
             <ul>
               <li><a href="/html/get-to-know-solar-power.html" id="get-to-know-solar-power">了解太阳能</a></li>
               <li><a href="/html/lpcvd.html" id="lpcvd">LPCVD</a>
@@ -183,20 +184,54 @@
         <!-- 左侧导航结束 -->
         </span><span><img src="/images/2j04.jpg" /></span> </div>
       <div class="right">
+      <div class="tittle-a">了解太阳能</div>
         <div id="content" class="toggle01">
+        
           <!-- 内容开始 -->
+          
           <!--切换开始-->
           <h3><a>薄膜太阳能电池发电技术原理介绍</a></h3>
           <div>
             <p>太阳能电池是以光电效应或者光化学反应为基础的把光能直接转换成电能的装置。薄膜太阳能通常采用PIN的结构：I层用来P层和N层用来形成内建电场。当入射光照在电池表面，I层会吸收光子的能量并产生空穴电子对，在PN结的内建电场作用下，空穴向P层移动，电子向N层移动。在不断有阳光入射并存在外接负载时，会产生持续稳定的电流。</p>
-            <div class="imgcentered"><img src="/images/solar-get-to-know1.jpg" /><br />
+            <div class="imgcentered">
+              <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="520" height="266">
+                <param name="movie" value="../swf/solar-get-to-know.swf">
+                <param name="quality" value="high">
+                <param name="wmode" value="opaque">
+                <param name="swfversion" value="8.0.35.0">
+                <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
+                <param name="expressinstall" value="../../Scripts/expressInstall.swf">
+                <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
+                <!--[if !IE]>-->
+                <object type="application/x-shockwave-flash" data="../swf/solar-get-to-know.swf" width="520" height="266">
+                  <!--<![endif]-->
+                  <param name="quality" value="high">
+                  <param name="wmode" value="opaque">
+                  <param name="swfversion" value="8.0.35.0">
+                  <param name="expressinstall" value="../../Scripts/expressInstall.swf">
+                  <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
+                  <div>
+                    <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
+                    <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
+                  </div>
+                  <!--[if !IE]>-->
+                </object>
+                <!--<![endif]-->
+              </object>
+              <br />
               太阳能电池结构及原理</div>
           </div>
           <!--切换结束-->
           <!--切换开始-->
           <h3><a> 理想能源硅基薄膜叠层电池的工艺流程 </a></h3>
           <div>
-            <div class="imgcentered"><img src="/images/gui-ji-bo-mo1.jpg" /><br />
+            <div class="imgcentered"><img src="/images/gui-ji-bo-mo1.jpg" border="0" usemap="#Map" />
+              <map name="Map">
+                <area shape="rect" coords="129,3,253,91" href="/html/lpcvd.html">
+                <area shape="rect" coords="4,103,115,195" href="/html/lpcvd.html">
+                <area shape="rect" coords="285,91,501,212" href="/html/pecvd.html">
+              </map>
+              <br />
               理想能源硅基薄膜叠层电池的工艺流程 </div>
           </div>
           <!--切换结束-->
@@ -220,5 +255,10 @@
   </div>
   <div class="sides"><img src="/images/2j02.blue.jpg" /></div>
 </div>
+<script type="text/javascript">
+<!--
+swfobject.registerObject("FlashID");
+//-->
+</script>
 </body>
 </html>

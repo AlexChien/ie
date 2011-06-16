@@ -45,10 +45,14 @@ body, div, ul, li, form, table, ol, dl, dt, dd { margin:0px; padding:0px; list-s
 .newsmore { height:20px; margin-top:10px; }
 .newsmore span { float:right; display:block; }
 .footer { width:100%; height:30px; line-height:30px; }
+.footer.index { width:100%; height:30px; line-height:30px; color:#FFF; }
 .footernav { float:left; }
 .footernav a { margin:0 8px; }
 .copyright { float:right; }
 .chanpin01 { width:386px; height:20px; text-align:center; line-height:20px; float:left; }
+.index_footernav { float:left; }
+.index_footernav a { margin:0 8px; color:#FFF; font-weight:bold;}
+.index_copyright { float:right; color:#FFF }
 /*2j*/
 #bg2j { background: url(/images/2jbg.blue.jpg) repeat-x #ebebeb; }
 .picture { width:944px; height:136px; }

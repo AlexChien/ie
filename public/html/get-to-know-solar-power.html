@@ -193,31 +193,14 @@
           <h3><a>薄膜太阳能电池发电技术原理介绍</a></h3>
           <div>
             <p>太阳能电池是以光电效应为基础把光能直接转换成电能的装置。硅基薄膜太阳能通常采用PIN的结构：I层用来吸收太阳光能量，P层和N层用来形成内建电场以收集电荷。当入射光照在电池表面，I层会吸收光子的能量并产生空穴电子对，在PN结的内建电场作用下，空穴向P层移动，电子向N层移动。在不断有阳光入射并存在外接负载时，会产生持续稳定的电流。</p>
-            <div class="imgcentered">
-              <object id="FlashID" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="520" height="266">
-                <param name="movie" value="/swf/solar-get-to-know.swf">
-                <param name="quality" value="high">
-                <param name="wmode" value="opaque">
-                <param name="swfversion" value="8.0.35.0">
-                <!-- 此 param 标签提示使用 Flash Player 6.0 r65 和更高版本的用户下载最新版本的 Flash Player。如果您不想让用户看到该提示，请将其删除。 -->
-                <param name="expressinstall" value="../../Scripts/expressInstall.swf">
-                <!-- 下一个对象标签用于非 IE 浏览器。所以使用 IECC 将其从 IE 隐藏。 -->
-                <!--[if !IE]>-->
-                <object type="application/x-shockwave-flash" data="../swf/solar-get-to-know.swf" width="520" height="266">
-                  <!--<![endif]-->
-                  <param name="quality" value="high">
-                  <param name="wmode" value="opaque">
-                  <param name="swfversion" value="8.0.35.0">
-                  <param name="expressinstall" value="../../Scripts/expressInstall.swf">
-                  <!-- 浏览器将以下替代内容显示给使用 Flash Player 6.0 和更低版本的用户。 -->
-                  <div>
-                    <h4>此页面上的内容需要较新版本的 Adobe Flash Player。</h4>
-                    <p><a href="http://www.adobe.com/go/getflashplayer"><img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="获取 Adobe Flash Player" width="112" height="33" /></a></p>
-                  </div>
-                  <!--[if !IE]>-->
-                </object>
-                <!--<![endif]-->
-              </object>
+            <div class="imgcentered" id="solor_demo">
+				<script type="text/javascript" src="/javascripts/swfobject.js"></script> 
+				<script type="text/javascript">
+					var so = new SWFObject("/swf/solar-get-to-know.swf", "gallery", "520", "266", "8", "#ffffff");
+					   so.addParam("quality", "high");
+					   so.addParam("wmode", "transparent");
+					   so.write("solor_demo");
+				</script>
               <br />
               太阳能电池结构及原理</div>
           </div>

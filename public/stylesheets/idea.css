@@ -191,4 +191,8 @@ a.disabled { color:#999; }
     color: white !important;
 }
 .tittle-a { font-size:16px; font-weight:bold; line-height:30px; margin-bottom:10px; color:green;}
+.m_team { width:649px; margin-top:20px;}
+.m_team span { display:block; margin-bottom:15px;}
+.m_team_pic { width:135px; height:180px; float:left; }
+.m_team_intro { width:490px; float:left; margin-left:24px; float:left; padding-top:8px; line-height:20px;}
 

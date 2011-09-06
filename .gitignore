@@ -8,6 +8,5 @@ Thumbs.db
 coverage/*
 CODE
 public/assets/*
-config/deploy/*
 immigrate
 immigrate.rar

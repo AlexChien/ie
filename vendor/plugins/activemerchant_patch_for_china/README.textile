@@ -1,0 +1,63 @@
+h1. activemerchant_patch_for_china
+
+This plugin is an active_merchant patch for china online payment platform, now it supports alipay (支付宝), 99bill (快钱), tenpay (财付通), 19pay(捷迅支付) and yeepay(易宝).
+
+<a href='http://www.pledgie.com/campaigns/14062'><img alt='Click here to lend your support to: activemerchant patch for china and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/14062.png?skin_name=chrome' border='0' /></a>
+
+**************************************************************************
+
+h2. Install
+
+install active_merchant and activemerchant_patch_for_china as plugins:
+
+<pre><code>
+script/plugin install git://github.com/Shopify/active_merchant.git
+script/plugin install git://github.com/flyerhzm/activemerchant_patch_for_china.git
+</code></pre>
+
+install activemerchant and activemerchant_patch_for_china as gems:
+
+<pre><code>
+sudo gem install activemerchant
+sudo gem install activemerchant_patch_for_china
+</code></pre>
+
+**************************************************************************
+
+h2. Configuration
+
+if you install active_merchant and activemerchant_patch_for_china as rails plugins, then define plugin load order in <code>config/environment.rb</code> to promise activemerchant_patch_for_china is loaded after active_merchant.
+
+<pre><code>
+config.plugins = [:all, :active_merchant, :activemerchant_patch_for_china]
+</code></pre>
+
+if you install activemerchant and activemerchant_patch_for_china as gems, then define in <code>config/environment.rb</code>
+
+<pre><code>
+config.gem "activemerchant", :lib => "active_merchant"
+config.gem "activemerchant_patch_for_china", :lib => false
+
+
+require 'active_merchant'
+require 'active_merchant/billing/integrations/action_view_helper'
+
+ActionView::Base.send(:include, ActiveMerchant::Billing::Integrations::ActionViewHelper)
+</code></pre>
+
+**************************************************************************
+
+h2. Usage
+
+"Alipay (支付宝)":http://github.com/flyerhzm/activemerchant_patch_for_china/wiki/Alipay-(%E6%94%AF%E4%BB%98%E5%AE%9D)
+
+**************************************************************************
+
+h2. About
+
+<code>activemerchant_patch_for_china</code> is inspired by "masterwujiang's patch":https://jadedpixel.lighthouseapp.com/projects/11599-active-merchant/tickets/8-patch-additon-integrations-support-alipay-99bill-and-tenpay-all-in-china
+
+**************************************************************************
+
+
+Copyright (c) 2009 - 2010 [Richard Huang], released under the MIT license

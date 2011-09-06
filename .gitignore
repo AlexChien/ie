@@ -1,12 +1,13 @@
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/
 config/database.yml
 Thumbs.db
 .DS_Store
-tmp/*
 coverage/*
 CODE
-log/*
 public/assets/*
 config/deploy/*
 immigrate
 immigrate.rar
-

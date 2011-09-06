@@ -1,0 +1,34 @@
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" class="memberlist blueth">
+                <tbody>
+                    <tr>
+                        <th>订单号</th>
+                        <th>商品名称</th>
+                        <th>下单日期</th>
+                        <th>总金额</th>
+                        <th>订单状态</th>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <%@orders.each do |order|%>
+                    <tr>
+                        <td><a href="/my/<%=order.id%>/order_show" target="_blank"><%=order.oid%></a></td>
+                        <td width="40%">超值订阅《星尚画报》周刊</td>
+                        <td><%=order.created_at.to_s(:db)%></td>
+                        <td>￥<%=order.amount%></td>
+                        <td><span class="point"><a href="/my/<%=order.id%>/order_show" target="_blank"><%=order.show_status%></a></span></td>
+                    </tr>
+                    <%end%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<%=will_paginate @orders%>

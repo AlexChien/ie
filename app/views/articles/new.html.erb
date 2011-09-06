@@ -1,0 +1,43 @@
+<%= javascript_include_tag 'fckeditor/fckeditor' %>
+<style>
+    .model_form p{margin-left:10px;}
+</style>
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <% form_for @article, :url => articles_path do |f| -%>
+            <%=f.error_messages%>
+            <div class="FormWrap model_form">
+                <h3>发布文章</h3>
+                <p>
+                    <%=f.label :title ,"文章标题<em>*</em>"%>
+                    <%=f.text_field :title,:size=>60%>
+                </p>
+                <p>
+                    <%=f.label :category_id ,"文章分类<em>*</em>"%>
+                    <%= f.select :category_id, Category.all.collect{|p| [p.name, p.id]},:selected=>params[:cid].to_i%>
+                </p>
+                <p>
+                    <%=f.label :is_published ,"是否发布"%>
+                    <%= f.check_box :is_published %>
+                </p>
+                <p>
+                    <%=f.label :memo ,"简短描述"%>
+                    <%= f.text_area :memo,:rows=>4%>
+                </p>
+                <p>
+                    <%=f.label :issue_time ,"发布时间"%>
+                    <%= f.date_select(:issue_time)%>
+                </p>
+                <%= fckeditor_textarea("article", "content", :toolbarSet => 'Simple', :width => '100%', :height => '350px',  :path => "/") %>
+
+                <p style="margin-left:300px;"><%=f.submit "保存"%></p>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>

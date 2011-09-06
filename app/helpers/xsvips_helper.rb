@@ -1,0 +1,2 @@
+module XsvipsHelper
+end

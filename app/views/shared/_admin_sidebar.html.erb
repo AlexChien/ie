@@ -1,0 +1,75 @@
+<li class="MemberMenuList">
+    <span>
+        <div style="font-size: 14px;">文章管理</div>
+    </span>
+    <ul style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+        <li>
+            <% Category.no_parent(true).all.each do |c| %>
+                <% text_indent = 20%>
+                <a href="/articles?cid=<%=c.id%>" style="text-indent:<%=text_indent%>px;"><b><%=c.name%></b></a>
+                <%=find_all_subcategories(c,text_indent)%>
+            <% end %>
+        </li>
+    </ul>
+</li>
+
+<li class="MemberMenuList">
+    <span>
+        <div style="font-size: 14px;">分类管理</div>
+    </span>
+    <ul style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+        <li>
+            <a href="/categories"><b>全部分类</b></a>
+            <a href="/categories/new"><b>添加分类</b></a>
+        </li>
+    </ul>
+</li>
+
+<li class="MemberMenuList">
+    <span>
+        <div style="font-size: 14px;">页面管理</div>
+    </span>
+    <ul style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+        <li>
+            <% PanelCategory.root.first.children.each do |pc| %>
+                <% text_indent = 20%>
+                <a href="/panel_contents?pcid=<%=pc.id%>" style="text-indent:<%=text_indent%>px;"><b><%=pc.name%></b></a>
+                <%=find_all_subcategories(pc,text_indent)%>
+            <% end %>
+        </li>
+    </ul>
+</li>
+
+<li class="MemberMenuList">
+    <span>
+        <div style="font-size: 14px;">用户管理</div>
+    </span>
+    <ul style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+        <li>
+            <a href="/users"><b>全部用户</b></a>
+        </li>
+    </ul>
+</li>
+
+<li class="MemberMenuList">
+    <span>
+        <div style="font-size: 14px;">交易记录</div>
+    </span>
+    <ul style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+        <li>
+            <a href="/my/orders"><b>所有订单</b></a>
+        </li>
+    </ul>
+</li>
+
+<li class="MemberMenuList">
+    <span>
+        <div style="font-size: 14px;">潮人秀</div>
+    </span>
+    <ul style="background: none repeat scroll 0% 0% rgb(255, 255, 255);">
+        <li>
+            <a href="/albums"><b>所有相册</b></a>
+			<a href="/albums/new"><b>新建相册</b></a>
+        </li>
+    </ul>
+</li>

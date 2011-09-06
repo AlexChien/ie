@@ -1,0 +1,1 @@
+Paperclip.options[:command_path] = "/usr/local/ImageMagick/bin" if Rails.env.production?

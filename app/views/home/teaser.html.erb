@@ -1,0 +1,21 @@
+<% content_for :header do -%>
+	<%= javascript_include_tag "swfobject" %>
+<% end -%>
+<!--最新鉴赏-->
+<div class="appreciate01" align="center">
+	<div><img src="/images/eyok29.jpg" /></div>
+	<p id="teaser_container"></p>
+	
+	<!-- Flash 图片轮播 begin -->
+	<script type="text/javascript">
+	var f_teaser = new SWFObject("/swf/iTunesAlbumArt.swf", "ff_teaser", 982, 750, "8", "#000000");
+	f_teaser.addParam("allowscriptaccess", "always");
+	f_teaser.addParam("wmode", "opaque");
+	f_teaser.addVariable("xmlsrc", '/webservice/teaser_album');
+	f_teaser.write("teaser_container");
+	// AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','982','height','750','src','../swf/iTunesAlbumArt','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','../swf/iTunesAlbumArt' ); //end AC code
+	</script>
+
+	<!-- Flash 图片轮播 end -->
+</div>
+<!--最新鉴结束-->

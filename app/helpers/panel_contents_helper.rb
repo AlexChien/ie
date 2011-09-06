@@ -1,0 +1,2 @@
+module PanelContentsHelper
+end

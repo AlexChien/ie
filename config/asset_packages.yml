@@ -1,8 +1,15 @@
 --- 
 javascripts:
-- base: []
+- base: 
+  - jquery-1.5.2.min
+  - jquery.treeview
+  - jquery-ui-1.8.12.custom.min
+  - ie
+  - slide
+  # - DD_belatedPNG
 stylesheets:
-- front:
-   - reset
-   - styles 
-- base: []
+- base: 
+  - jquery.treeview
+  - jquery-ui-1.8.12.custom
+  - idea
+

@@ -1,0 +1,29 @@
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <% form_for @user,:url=>update_role_user_path,:method=>:put do |f| -%>
+            <%=f.error_messages%>
+            <div class="FormWrap model_form">
+                <h3>管理权限</h3>
+                <p>
+                    <%=f.label :name ,"用户名"%>
+                    <%=f.text_field :name,:size=>40,:disabled=>"disabled"%>
+                </p>
+                <p>
+                    <%=label_tag :current_roles ,"当前权限"%>
+                    <%=@user.role_names%>
+                </p>
+                <p>
+                    <%=f.label :roles ,"修改权限"%>
+                    <%= select_tag :roles, options_for_select(Role.all.collect{|p| [p.name, p.id]})%>
+                </p>
+                <p style="margin-left:300px;"><%=f.submit "修改"%></p>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>

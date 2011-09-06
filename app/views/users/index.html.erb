@@ -1,0 +1,39 @@
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" class="memberlist blueth">
+                <tbody>
+                    <tr>
+                        <th>用户名</th>
+                        <th>昵称</th>
+                        <th>当前权限</th>
+                        <th>电子邮箱</th>
+                        <th>手机号码</th>
+                        <th>创建时间</th>
+                        <th width=60></th>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <%@users.each do |user|%>
+                    <tr>
+                        <td><%=user.login%></td>
+                        <td><%=user.name%></td>
+                        <td><%=user.role_names%></td>
+                        <td><%=user.email%></td>
+                        <td><%=user.mobile%></td>
+                        <td><%=user.created_at.to_s(:db)%></td>
+                        <td>
+                        <%= link_to "管理权限", edit_role_user_url(user)%>
+                    </tr>
+                    <%end%>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<%=will_paginate @users%>

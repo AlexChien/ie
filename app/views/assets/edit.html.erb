@@ -1,0 +1,36 @@
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <% form_for @asset, :html=>{:multipart => true} do |f| -%>
+            <%=f.error_messages%>
+            <div class="FormWrap model_form">
+				<h3 class="orange"><a href="/albums/<%=@asset.resource.id%>/edit">相册</a> - <%=@asset.resource.title%> - 修改图片</h3>
+				<p>
+                    <%=label_tag :photo,"图片"%>
+                    <a title="<%=@asset.memo%>" href="<%=@asset.photo.url%>" class="thickbox"><img src="<%=@asset.photo.url(:thumb)%>"></a>
+                </p>
+
+                <p>
+                    <%=f.label :name,"图片名称"%>
+                    <%=f.text_field :name,:size=>40%>
+                </p>
+
+				<p>
+                    <%=f.label :weight,"图片权重："%>
+                    <%=f.text_field :weight,:size=>40%>
+                </p>
+
+                <p>
+                    <%=f.label :memo,"简介："%>
+                    <%=f.text_area :memo,:rows=>5%>
+                </p>
+                <p style="margin-left:300px;"><%=f.submit "保存"%></p>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>

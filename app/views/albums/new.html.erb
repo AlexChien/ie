@@ -1,0 +1,31 @@
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <% form_for @album, :url => albums_path, :html=>{:multipart => true} do |f| -%>
+            <%=f.error_messages%>
+            <div class="FormWrap model_form">
+                <h3>新建相册</h3>
+                <p>
+                    <%=f.label :title,"相册名<em>*</em>"%>
+                    <%=f.text_field :title,:size=>40%>
+                </p>
+
+				<p>
+                    <%=f.label :weight,"相册权重"%>
+                    <%=f.text_field :weight,:size=>40%>
+                </p>
+
+                <p>
+                    <%=f.label :memo,"简介："%>
+                    <%=f.text_area :memo,:rows=>5%>
+                </p>
+                <p style="margin-left:300px;"><%=f.submit "保存"%></p>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</div>
+
+<div class="clear"></div>

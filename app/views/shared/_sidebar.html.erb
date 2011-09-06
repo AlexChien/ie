@@ -1,0 +1,15 @@
+<div class="MemberSidebar">
+    <div class="MemberMenu">
+        <div class="title"></div>
+        <div class="body">
+            <ul>
+                <%if current_user.has_role?("admin")%>
+                    <%=render :partial => "shared/admin_sidebar"%>
+                <%else%>
+                    <%=render :partial => "shared/user_sidebar"%>
+                <%end%>
+            </ul>
+        </div>
+        <div class="foot"></div>
+    </div>
+</div>

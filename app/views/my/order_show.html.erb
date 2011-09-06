@@ -1,0 +1,139 @@
+<div style="margin: auto; width: 950px;">
+    <%=render :partial=>"shared/sidebar"%>
+
+    <div class="MemberMain">
+        <div style="padding:10px;">
+            <div style="background: none repeat scroll 0% 0% rgb(245, 244, 236); border: 1px solid rgb(229, 221, 199);" class="FormWrap ">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%" class="liststyle data">
+                    <col class="span-auto ColColorBlue">
+                    <col class="span-5 ColColorGray">
+                    <col class="span-4 ColColorGray ">
+                    <tbody>
+                        <tr>
+                            <td><h4>订单编号：<%=@order.oid%></h4></td> <td>下单日期：<%=@order.created_at.to_s(:db)%></td>
+                            <td>
+                                状态：<%=@order.show_status%>
+                                <%if current_user.has_role?("admin")%>
+									<%if @order.status == 1%>
+                                		<br /><%=link_to "标记为已处理","/orders/#{@order.id}/mark",:confirm=>"确认要把此订单标记为已处理吗？",:style=>"color:#FE6C00;"%>
+									<%elsif @order.status == 0%>
+										<br /><%=link_to "确认收款","/orders/#{@order.id}/mark",:confirm=>"确认此订单已收款了吗？",:style=>"color:#FE6C00;"%>
+									<%end%>
+                                <%end%>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div style="background: none repeat scroll 0% 0% rgb(245, 244, 236); border: 1px solid rgb(229, 221, 199);" class="FormWrap ">
+                <h4>购买的商品</h4>
+                <div class="division">
+                    <table cellspacing="0" cellpadding="3" width="100%" class="liststyle">
+                        <col class="span-2">
+                        <col class="span-auto">
+                        <col class="span-2">
+                        <col class="span-3">
+                        <col class="span-2 ColColorOrange">
+                        <thead>
+                            <tr>
+                                <th>图片</th>
+                                <th>商品名称</th>
+                                <th>价格</th>
+                                <th>数量</th>
+                                <th>小计</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <%@order.order_line_items.each do |oli|%>
+                            <tr>
+                                <td>
+                                    <div style="width: 50px; height: 50px;" class="product-list-img">
+                                        <a  style="border: 0px none;"><img height="50" width="50" src="/images/newspaper_thumb.jpg" style="cursor: pointer;"></a>
+                                    </div>
+                                </td>
+                                <td><a target="_blank"><%=oli.product.name%>（<%=oli.property.name%>）</a></td>
+                                <td>￥<%=oli.unit_price%></td>
+                                <td><%=oli.quantity%></td>
+                                <td>￥<%=oli.total_price%></td>
+                            </tr>
+                            <%end%>
+                        </tbody>
+                    </table>
+                </div>
+                <h4>收货人信息</h4>
+                <div class="division">
+                    <table cellspacing="0" cellpadding="0" width="100%" class="liststyle data">
+                        <tbody>
+                            <tr>
+                                <th>收货人姓名:</th>
+                                <td><%=@order.receiver_name%></td>
+                                <th>收货人手机:</th>
+                                <td><%=@order.mobile%></td>
+                            </tr>
+                            <tr>
+                                <th>收货人地址:</th>
+                                <td><%=@order.address%></td>
+                                <th>收货人邮编:</th>
+                                <td><%=@order.zip_code%></td>
+                            </tr>
+                            <tr>
+                                <th>固定电话:</th>
+                                <td><%=@order.phone%></td>
+                                <th>付款方式:</th>
+                                <td> 支付宝 &nbsp;  </td>
+                            </tr>
+                            <tr>
+                                <th valign="top">订单附言:</th>
+                                <td valign="top" colspan="3"><%=@order.memo%></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <table cellspacing="0" cellpadding="0" border="0" width="100%" class="liststyle data">
+                <col class="span-auto ColColorGray">
+                <col class="span-4 ColColorOrange textright">
+                <tbody>
+                    <tr>
+                        <th style="text-align:right;">订单总金额:</th>
+                        <td class="price1">￥<%=@order.amount%></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <%unless current_user.has_role?("admin") || @order.status == 1%>
+            <div class="division">
+                <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <% payment_service_for "#{@order.oid}", ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT,
+                                :service => :alipay,
+                                :html => { :id => 'payment-form', :method => :get } do |service| %>
+                                <% service.total_fee "#{@order.amount}" %>
+                                <%# service.total_fee 0.01 %>
+                                <% service.seller :id => ActiveMerchant::Billing::Integrations::Alipay::ACCOUNT %>
+                                <%# service.seller :email => ActiveMerchant::Billing::Integrations::Alipay::EMAIL %>
+                                <% service.notify_url url_for(:only_path => false, :controller=>'orders', :action => 'notify') %>
+                                <% service.return_url url_for(:only_path => false, :controller=>'orders', :action => 'done') %>
+                                <%# service.show_url url_for(:only_path => false, :controller=>'orders', :action => 'show_order') %>
+                                <% service.body '超值订阅《星尚画报》周刊' %>
+                                <% service.charset "utf-8" %>
+                                <% service.service ActiveMerchant::Billing::Integrations::Alipay::Helper::CREATE_DIRECT_PAY_BY_USER %>
+                                <% service.payment_type 1 %>
+                                <% service.subject '超值订阅《星尚画报》周刊' %>
+                                <% service.sign %>
+                                <% end %>
+                                <%= button_to_function "Submit", "document.getElementById('payment-form').submit();" ,:class=>"actbtn btn-pay",:style=>"float:right;"%>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <%end%>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>

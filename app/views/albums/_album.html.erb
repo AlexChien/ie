@@ -1,0 +1,21 @@
+<%unless album.nil?%>
+	<td style="padding-bottom: 20px;">
+		<div class="album_bg">
+			<%if album.assets.empty?%>
+				<a title="<%=album.memo%>"><img src="/images/nopic.gif"></a>
+			<%else%>
+				<a title="<%=album.memo%>" href="/albums/<%=album.id%>"><img src="<%=album.primary_image_url%>"></a>
+			<%end%>
+		</div>
+		<p class="orange">
+			<a title="<%=album.memo%>" <%unless album.assets.empty?%>href="/albums/<%=album.id%>"<%end%>><%=album.title%></a><span class="gray">(<%=album.assets.size%>)</span>
+		</p>
+		<%if current_user && current_user.has_role?("admin")%>
+			<p class="gray">
+				<a href="/albums/<%=album.id%>/edit">管理相册</a>
+				<span class="pipe">|</span>
+				<a href="/albums/<%=album.id%>/assets_new">上传图片</a>
+			</p>
+		<%end%>
+	</td>
+<%end%>

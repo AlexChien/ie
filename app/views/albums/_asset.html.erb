@@ -1,0 +1,10 @@
+<%unless asset.nil?%>
+	<td style="padding-bottom: 20px;">
+		<div class="album_bg">
+			<a title="<%=asset.name%> : <%=asset.memo%>" href="<%=asset.photo.url%>" rel="assets"><img src="<%=asset.photo.url(:thumb)%>"></a>
+		</div>
+		<p class="orange" style="text-align:center;">
+			<a title="<%=asset.memo%>" href="<%=asset.photo.url%>" class="thickbox"><%=asset.name%></a>
+		</p>
+	</td>
+<%end%>

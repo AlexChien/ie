@@ -1,3 +1,7 @@
-require File.join(File.dirname(__FILE__), 'config', 'boot')
+# Add your own tasks in files placed in lib/tasks ending in .rake,
+# for example lib/tasks/capistrano.rake, and they will automatically be available to Rake.
 
-import File.join(RADIANT_ROOT, 'Rakefile')
+require File.expand_path('../config/application', __FILE__)
+require 'rake'
+
+Ie::Application.load_tasks

@@ -6,7 +6,5 @@ coverage/*
 CODE
 log/*
 public/assets/*
-config/deploy/*
 immigrate
 immigrate.rar
-

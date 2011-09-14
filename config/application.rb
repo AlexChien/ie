@@ -42,5 +42,11 @@ module Ie
     config.i18n.default_locale = 'zh-CN'
     
     config.serve_static_assets = true
+    
+    # Enable the asset pipeline
+    config.assets.enabled = true
+
+    # Version of your assets, change this if you want to expire all your assets
+    config.assets.version = '1.0'
   end
 end

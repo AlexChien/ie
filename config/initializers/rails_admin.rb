@@ -11,36 +11,36 @@
 
 RailsAdmin.config do |config|
 
+  config.included_models = ["User","Category","Content"]
+
   config.model User do
-      list do
-        field :email
-        field :sign_in_count
-        field :current_sign_in_at
-        field :last_sign_in_at
-        field :current_sign_in_ip
-        field :last_sign_in_ip
-        field :failed_attempts
-        field :created_at
-        field :updated_at
-      end
-      edit do
-        field :email
-        field :password
-        field :password_confirmation
-      end
-      export do
-        field :email
-        field :sign_in_count
-        field :current_sign_in_at
-        field :last_sign_in_at
-        field :current_sign_in_ip
-        field :last_sign_in_ip
-        field :failed_attempts
-        field :created_at
-        field :updated_at
+    list do
+      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
+                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+    end
+    edit do
+      include_fields :email, :password, :password_confirmation
+    end
+    export do
+      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
+                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+    end
+  end
+  
+
+  
+  config.model Content do
+    field :title
+    field :category
+    field :issue_date
+    field :link_type, :enum do
+      enum do
+        [["无链接",0], ["外部链接",1],["内部链接",2]]
       end
     end
-  
+    include_fields :source, :source_link, :desc
+    include_fields :created_at, :updated_at
+  end
 
   # config.model Category do
   #   edit do

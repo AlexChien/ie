@@ -117,10 +117,7 @@
     models:
        user: "用户"
        category: "分类"
-       article: "文章"
-       panel_category: "内容分类"
-       panel_content: "内容"
-       album: "相册"
+       content: "内容"
 
     attributes:
        user:
@@ -138,16 +135,20 @@
          created_at: "创建时间"
          updated_at: "更新时间"
        category:
-         name: "分类名"
-       article:
-         title: "文章标题"
-         category_id: "文章分类"
-       panel_category:
-         name: "内容分类名"
-       panel_content:
-         title: "内容标题"
-         panel_category_id: "内容分类"
-       album:
-         title: "相册名"
+         name_en: "分类名(英文)"
+         name_zh_cn: "分类名(中文)"
+         contents: "内容"
+         created_at: "创建时间"
+         updated_at: "更新时间"
+       content:
+         title: "标题"
+         category: "分类"
+         source: "来源"
+         source_link: "外部链接url"
+         link_type: "链接类型"
+         issue_date: "发布日期"
+         desc: "正文内容"
+         created_at: "创建时间"
+         updated_at: "更新时间"
     
   site_name: "理想能源"

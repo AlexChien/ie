@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="<%= I18n.locale %>">
 <head>
@@ -9,6 +10,7 @@
 	<%= include_javascripts 'base' %>
 	
 	<%= yield :header %>
+
 </head>
 <body id="bggray" >
 	<div id="idea">
@@ -20,7 +22,22 @@
 
 			<div class="picture"><img src="/images/about-us-1.jpg" /></div>
 			<div class="content2j">
-				<%= yield %>
+				<div class="left">
+					<span><img src="/images/2j04.jpg" /></span>
+					<span class="leftnav">
+						<div class="leftnav01">About us</div>
+
+						<%= render :partial => "shared/side_nav" %>
+
+					</span>
+					<span><img src="/images/2j04.jpg" /></span>
+				</div>
+				<div class="right">
+
+					<%= yield :content %>
+
+				</div>
+				<div class="blank0"></div>
 			</div>
 
 			<%= render :partial => "shared/footer" %>

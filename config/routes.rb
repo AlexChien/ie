@@ -1,20 +1,20 @@
 Ie::Application.routes.draw do
   devise_for :users
 
-  namespace :admin do
-    resources :users do
-      member do
-        get 'edit_role'
-        put 'update_role'
-      end
-    end
-    
-    resources :session
-    resources :categories
-    resources :articles
-    resources :panel_categories
-    
-  end
+  # namespace :admin do
+  #   resources :users do
+  #     member do
+  #       get 'edit_role'
+  #       put 'update_role'
+  #     end
+  #   end
+  #   
+  #   resources :session
+  #   resources :categories
+  #   resources :articles
+  #   resources :panel_categories
+  #   
+  # end
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   

@@ -129,6 +129,14 @@
          email: "电子邮箱"
          password: "密码"
          password_confirmation: "确认密码"
+         sign_in_count: "登陆次数"
+         current_sign_in_at: "当前登陆时间"
+         last_sign_in_at: "最后登陆时间"
+         current_sign_in_ip: "当前登陆ip"
+         last_sign_in_ip: "最后登陆ip"
+         failed_attempts: "错误尝试次数"
+         created_at: "创建时间"
+         updated_at: "更新时间"
        category:
          name: "分类名"
        article:

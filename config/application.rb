@@ -39,7 +39,7 @@ module Ie
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
     
-    config.i18n.default_locale = 'zh-CN'
+    # config.i18n.default_locale = 'zh-CN'
     
     config.serve_static_assets = true
     

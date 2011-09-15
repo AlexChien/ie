@@ -7,8 +7,7 @@ class CreateAssets < ActiveRecord::Migration
       t.string :uploaded_data_file_size
       t.datetime :uploaded_data_updated_at
       t.string :uploaded_data_content_type
-      t.integer :resource_id
-      t.integer :resource_type
+      t.integer :content_id
       t.timestamps
     end
   end

@@ -118,6 +118,7 @@
        user: "用户"
        category: "分类"
        content: "内容"
+       asset: "资源"
 
     attributes:
        user:
@@ -149,6 +150,7 @@
          source_link: "外部链接url"
          link_type: "链接类型"
          issue_date: "发布日期"
+         assets: "资源"
          desc: "正文内容(中文)"
          desc_en: "正文内容(英文)"
          created_at: "创建时间"

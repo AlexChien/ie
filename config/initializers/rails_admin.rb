@@ -37,13 +37,20 @@ RailsAdmin.config do |config|
         [["无链接",0], ["外部链接",1],["内部链接",2]]
       end
     end
-    include_fields :source, :source_en, :source_link, :desc, :desc_en
+    include_fields :source, :source_en, :source_link
+    field :assets
+    include_fields :desc, :desc_en
     include_fields :created_at, :updated_at
   end
 
   config.model Asset do
     edit do
       field :name
+      field :file_type, :enum do
+        enum do
+          [["图片",0], ["flv",1],["其它",99]]
+        end
+      end
       field :uploaded_data, :paperclip_file do
         thumb_method :thumb # for images. Will default to full size image, which might break the layout
         delete_method :delete_uploaded_data # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it

@@ -42,7 +42,9 @@ RailsAdmin.config do |config|
     field :desc, :text do
       ckeditor true
     end
-    field :desc_en
+    field :desc_en, :text do
+      ckeditor true
+    end
     include_fields :created_at, :updated_at
   end
 

@@ -8,5 +8,6 @@ Thumbs.db
 coverage/*
 CODE
 public/assets/*
+public/ckeditor_assets/*
 immigrate
 immigrate.rar

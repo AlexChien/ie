@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110914202645) do
+ActiveRecord::Schema.define(:version => 20110915141649) do
 
   create_table "categories", :force => true do |t|
     t.string   "name_en"
@@ -29,6 +29,9 @@ ActiveRecord::Schema.define(:version => 20110914202645) do
     t.text     "desc"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title_en"
+    t.string   "source_en"
+    t.text     "desc_en"
   end
 
   create_table "rails_admin_histories", :force => true do |t|

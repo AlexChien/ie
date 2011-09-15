@@ -31,6 +31,7 @@ RailsAdmin.config do |config|
   
   config.model Content do
     field :title
+    field :title_en
     field :category
     field :issue_date
     field :link_type, :enum do
@@ -38,7 +39,7 @@ RailsAdmin.config do |config|
         [["无链接",0], ["外部链接",1],["内部链接",2]]
       end
     end
-    include_fields :source, :source_link, :desc
+    include_fields :source, :source_en, :source_link, :desc, :desc_en
     include_fields :created_at, :updated_at
   end
 

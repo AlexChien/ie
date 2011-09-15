@@ -11,7 +11,7 @@
 
 RailsAdmin.config do |config|
 
-  config.included_models = ["User","Category","Content","Asset"]
+  config.included_models = ["User","Category","Content","Upload"]
 
   config.model User do
     list do
@@ -38,12 +38,15 @@ RailsAdmin.config do |config|
       end
     end
     include_fields :source, :source_en, :source_link
-    field :assets
-    include_fields :desc, :desc_en
+    field :uploads
+    field :desc, :text do
+      ckeditor true
+    end
+    field :desc_en
     include_fields :created_at, :updated_at
   end
 
-  config.model Asset do
+  config.model Upload do
     field :name
     field :file_type, :enum do
       enum do

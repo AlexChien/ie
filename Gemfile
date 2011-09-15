@@ -20,7 +20,7 @@ gem "jquery-rails"
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'mysql2', '0.3.7'
-gem 'ckeditor', '3.6.0'
+gem 'ckeditor'
 
 gem 'fastercsv'
 gem 'devise'

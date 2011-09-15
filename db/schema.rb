@@ -10,7 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110915141649) do
+ActiveRecord::Schema.define(:version => 20110915153256) do
+
+  create_table "assets", :force => true do |t|
+    t.string   "name"
+    t.integer  "file_type",                  :default => 0
+    t.string   "uploaded_data_file_name"
+    t.string   "uploaded_data_file_size"
+    t.datetime "uploaded_data_updated_at"
+    t.string   "uploaded_data_content_type"
+    t.integer  "resource_id"
+    t.integer  "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "categories", :force => true do |t|
     t.string   "name_en"

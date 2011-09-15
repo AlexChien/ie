@@ -11,7 +11,7 @@
 
 RailsAdmin.config do |config|
 
-  config.included_models = ["User","Category","Content"]
+  config.included_models = ["User","Category","Content","Asset"]
 
   config.model User do
     list do
@@ -27,8 +27,6 @@ RailsAdmin.config do |config|
     end
   end
   
-
-  
   config.model Content do
     field :title
     field :title_en
@@ -43,15 +41,15 @@ RailsAdmin.config do |config|
     include_fields :created_at, :updated_at
   end
 
-  # config.model Category do
-  #   edit do
-  #     field :name
-  #     field :image, :paperclip_file do
-  #       thumb_method :thumb # for images. Will default to full size image, which might break the layout
-  #       delete_method :delete_image # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
-  #     end
-  #   end
-  # end
+  config.model Asset do
+    edit do
+      field :name
+      field :uploaded_data, :paperclip_file do
+        thumb_method :thumb # for images. Will default to full size image, which might break the layout
+        delete_method :delete_uploaded_data # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
+      end
+    end
+  end
   
 
   #  ==> Authentication (before_filter)

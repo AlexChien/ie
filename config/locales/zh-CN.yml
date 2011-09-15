@@ -124,6 +124,8 @@
        category: "分类"
        content: "内容"
        upload: "资源"
+       department: "部门"
+       job: "职位"
 
     attributes:
        user:
@@ -167,5 +169,18 @@
          resource: "来源"
          created_at: "创建时间"
          updated_at: "更新时间"
+       department:
+         name_en: "部门名称(英文)"
+         name_zh_cn: "部门名称(中文)"
+         jobs: "职位"
+         created_at: "创建时间"
+         updated_at: "更新时间"
+       job:
+         job_name: "职位名称（中文）"
+         job_name_en: "职位名称（英文）"
+         department: "部门"
+         job_type: "类别"
+         responsibility: "岗位职责"
+         requirement: "任职资格"
     
   site_name: "理想能源"

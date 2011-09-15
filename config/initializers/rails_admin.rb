@@ -11,7 +11,7 @@
 
 RailsAdmin.config do |config|
 
-  config.included_models = ["User","Category","Content","Upload"]
+  config.included_models = ["User","Category","Content","Upload","Department","Job"]
 
   config.model User do
     list do
@@ -63,7 +63,24 @@ RailsAdmin.config do |config|
     include_fields :created_at, :updated_at
   end
   
-
+  config.model Job do
+    field :job_name
+    field :job_name_en
+    field :department
+    field :job_type, :enum do
+      enum do
+        [["社会招聘",0], ["校园招聘",1],["实习生计划",99]]
+      end
+    end
+    field :responsibility, :text do
+      ckeditor true
+    end
+    field :requirement, :text do
+      ckeditor true
+    end
+    include_fields :created_at, :updated_at
+  end
+  
   #  ==> Authentication (before_filter)
   # This is run inside the controller instance so you can setup any authentication you need to.
   # By default, the authentication will run via warden if available.

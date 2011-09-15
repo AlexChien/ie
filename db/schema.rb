@@ -10,20 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110916021924) do
-
-  create_table "assets", :force => true do |t|
-    t.string   "name"
-    t.integer  "file_type",                  :default => 0
-    t.string   "uploaded_data_file_name"
-    t.string   "uploaded_data_file_size"
-    t.datetime "uploaded_data_updated_at"
-    t.string   "uploaded_data_content_type"
-    t.integer  "resource_id"
-    t.string   "resource_type"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20110916021926) do
 
   create_table "categories", :force => true do |t|
     t.string   "name_en"
@@ -61,6 +48,25 @@ ActiveRecord::Schema.define(:version => 20110916021924) do
     t.text     "desc_en"
   end
 
+  create_table "departments", :force => true do |t|
+    t.string   "name_en"
+    t.string   "name_zh_cn"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "jobs", :force => true do |t|
+    t.string   "job_name"
+    t.string   "job_name_en"
+    t.integer  "department_id"
+    t.integer  "job_type",       :default => 0
+    t.integer  "integer",        :default => 0
+    t.text     "responsibility"
+    t.text     "requirement"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "rails_admin_histories", :force => true do |t|
     t.string   "message"
     t.string   "username"
@@ -76,6 +82,19 @@ ActiveRecord::Schema.define(:version => 20110916021924) do
 
   create_table "translators", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "uploads", :force => true do |t|
+    t.string   "name"
+    t.integer  "file_type",                  :default => 0
+    t.string   "uploaded_data_file_name"
+    t.string   "uploaded_data_file_size"
+    t.datetime "uploaded_data_updated_at"
+    t.string   "uploaded_data_content_type"
+    t.integer  "resource_id"
+    t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

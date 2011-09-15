@@ -1,5 +1,5 @@
 class Asset < ActiveRecord::Base
-  belongs_to :content
+  belongs_to :resource, :polymorphic => true
   validates_presence_of :name
   
   has_attached_file :uploaded_data,

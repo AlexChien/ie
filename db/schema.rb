@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20110915153256) do
     t.datetime "uploaded_data_updated_at"
     t.string   "uploaded_data_content_type"
     t.integer  "resource_id"
-    t.integer  "resource_type"
+    t.string   "resource_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

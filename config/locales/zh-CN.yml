@@ -83,7 +83,12 @@
     array:
       sentence_connector: "和"
       skip_last_comma: true
-
+      words_connector: ", "
+      two_words_connector: " 和 "
+      last_word_connector: ", 和 "
+    select:
+      prompt: "请选择"
+      
   activerecord:
     errors:
       full_messages:
@@ -153,6 +158,13 @@
          assets: "资源"
          desc: "正文内容(中文)"
          desc_en: "正文内容(英文)"
+         created_at: "创建时间"
+         updated_at: "更新时间"
+       asset:
+         name: "名称"
+         file_type: "类型"
+         uploaded_data: "文件"
+         resource: "来源"
          created_at: "创建时间"
          updated_at: "更新时间"
     

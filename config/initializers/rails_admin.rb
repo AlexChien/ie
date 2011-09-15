@@ -44,18 +44,18 @@ RailsAdmin.config do |config|
   end
 
   config.model Asset do
-    edit do
-      field :name
-      field :file_type, :enum do
-        enum do
-          [["图片",0], ["flv",1],["其它",99]]
-        end
-      end
-      field :uploaded_data, :paperclip_file do
-        thumb_method :thumb # for images. Will default to full size image, which might break the layout
-        delete_method :delete_uploaded_data # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
+    field :name
+    field :file_type, :enum do
+      enum do
+        [["图片",0], ["flv",1],["其它",99]]
       end
     end
+    field :uploaded_data, :paperclip_file do
+      thumb_method :thumb # for images. Will default to full size image, which might break the layout
+      delete_method :delete_uploaded_data # actually not needed in this case: default is "delete_#{field_name}" if the object responds to it
+    end
+    field :resource
+    include_fields :created_at, :updated_at
   end
   
 

@@ -27,6 +27,29 @@ RailsAdmin.config do |config|
     end
   end
   
+  config.model Category do
+    field :name_en
+    field :name_zh_cn
+    field :path
+    field :layout, :enum do
+      enum do
+        [["front",0], ["home",1]]
+      end
+    end
+    field :html_content, :text do
+      ckeditor true
+    end
+    field :html_content_en, :text do
+      ckeditor true
+    end
+    field :use_portlet
+    field :portlet_content
+    field :parent
+    field :children
+    field :contents
+    include_fields :created_at, :updated_at
+  end
+  
   config.model Content do
     field :title
     field :title_en

@@ -10,13 +10,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110916021926) do
+ActiveRecord::Schema.define(:version => 20110917180058) do
 
   create_table "categories", :force => true do |t|
     t.string   "name_en"
     t.string   "name_zh_cn"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "parent_id"
+    t.string   "path"
+    t.integer  "layout",          :default => 0
+    t.text     "html_content"
+    t.text     "html_content_en"
+    t.boolean  "use_portlet",     :default => false
+    t.text     "portlet_content"
   end
 
   create_table "ckeditor_assets", :force => true do |t|

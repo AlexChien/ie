@@ -1,4 +1,5 @@
 class Category < ActiveRecord::Base
+  acts_as_tree
   has_many :contents
   
   validates_presence_of :name_en,:name_zh_cn

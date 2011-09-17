@@ -1,0 +1,24 @@
+<style type="text/css" media="screen">
+    .pagination span.current,.pagination a:hover{
+        background-color: #461200;
+        color: #FFFFFF;
+        border: 1px solid #CCCCCC;
+    }
+</style>
+<div id="article_category">
+    <% @articles.each do |article| %>
+        <div class="ac_result">
+            <div class="ac_title">
+                <a href="/articles/<%=article.id%>?keepThis=true&TB_iframe=true&height=580&width=640" class="thickbox"><%=article.title%></a>
+            </div>
+            <div class="ac_content">
+                <%=truncate(article.content.gsub(/<.*?>/,''), :length=>200) %>
+            </div>
+            <div class="ac_footer">
+                发布日期：<%=article.issue_time.nil? ? "" : article.issue_time.to_date %>
+            </div>
+        </div>
+    <% end %>
+</div>
+
+<%=will_paginate @articles%>

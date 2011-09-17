@@ -2,9 +2,15 @@
 	<div class="logo"><a href="/html/cn/index.html"><img src="/images/logo.jpg" /></a></div>
 	<!--导航-->
 	<div class="menu">
-
-		<%= render :partial => "shared/navigation" %>
-		
+		<%#= render :partial => "shared/navigation" %>
+		<%Page.no_parent.all.each do |page|%>
+			<ul>
+				<li>
+					<a class='hide' href='<%=page.path%>'><b class='dazi'><%=page.name_en%></b></a>
+					<%=raw find_all_subpages(page)%>
+				</li>
+			</ul>
+		<%end%>
 	</div>
 	<!--导航结束-->
 </div>

@@ -29,4 +29,21 @@ module ApplicationHelper
     end
     ret
   end
+  
+  def find_all_subpages(page)
+    ret = ""
+    if page.children.size > 0
+      ret += "<ul><li>"
+      page.children.each do |subcat|
+        if subcat.children.size > 0
+          ret += "<a class='hide' href='#{subcat.path}'>#{subcat.name_en}</a>"
+          ret += find_all_subpages(subcat)
+        else
+          ret += "<a href='#{subcat.path}'>#{subcat.name_en}</a>"
+        end
+      end
+      ret += "</li></ul>"
+    end 
+    ret
+  end
 end

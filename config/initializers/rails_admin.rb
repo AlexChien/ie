@@ -11,7 +11,7 @@
 
 RailsAdmin.config do |config|
 
-  config.included_models = ["User","Category","Content","Upload","Department","Job"]
+  config.included_models = ["User","Template","Page","Content","Upload","Department","Job"]
 
   config.model User do
     list do
@@ -27,15 +27,11 @@ RailsAdmin.config do |config|
     end
   end
   
-  config.model Category do
+  config.model Page do
     field :name_en
     field :name_zh_cn
     field :path
-    field :layout, :enum do
-      enum do
-        [["front",0], ["home",1]]
-      end
-    end
+    field :template
     field :html_content, :text do
       ckeditor true
     end
@@ -53,7 +49,7 @@ RailsAdmin.config do |config|
   config.model Content do
     field :title
     field :title_en
-    field :category
+    field :page
     field :issue_date
     field :link_type, :enum do
       enum do

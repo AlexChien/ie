@@ -10,21 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110917180058) do
-
-  create_table "categories", :force => true do |t|
-    t.string   "name_en"
-    t.string   "name_zh_cn"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "parent_id"
-    t.string   "path"
-    t.integer  "layout",          :default => 0
-    t.text     "html_content"
-    t.text     "html_content_en"
-    t.boolean  "use_portlet",     :default => false
-    t.text     "portlet_content"
-  end
+ActiveRecord::Schema.define(:version => 20110916021926) do
 
   create_table "ckeditor_assets", :force => true do |t|
     t.string   "data_file_name",                  :null => false
@@ -74,6 +60,20 @@ ActiveRecord::Schema.define(:version => 20110917180058) do
     t.datetime "updated_at"
   end
 
+  create_table "pages", :force => true do |t|
+    t.string   "name_en"
+    t.string   "name_zh_cn"
+    t.integer  "parent_id"
+    t.string   "path"
+    t.integer  "template_id"
+    t.text     "html_content"
+    t.text     "html_content_en"
+    t.boolean  "use_portlet",     :default => false
+    t.text     "portlet_content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "rails_admin_histories", :force => true do |t|
     t.string   "message"
     t.string   "username"
@@ -86,6 +86,13 @@ ActiveRecord::Schema.define(:version => 20110917180058) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "templates", :force => true do |t|
+    t.string   "name"
+    t.text     "layout"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "translators", :force => true do |t|
     t.string   "name"

@@ -121,7 +121,8 @@
 
     models:
        user: "用户"
-       category: "分类"
+       template: "模版"
+       page: "页面"
        content: "内容"
        upload: "资源"
        department: "部门"
@@ -142,17 +143,23 @@
          failed_attempts: "错误尝试次数"
          created_at: "创建时间"
          updated_at: "更新时间"
-       category:
+       template:
+         name: "名称"
+         layout: "layout"
+         pages: "页面"
+         created_at: "创建时间"
+         updated_at: "更新时间"
+       page:
          name_en: "分类名(英文)"
          name_zh_cn: "分类名(中文)"
          path: "访问url"
-         layout: "样式"
+         template: "模版"
          html_content: "html内容(中文)"
          html_content_en: "html内容(英文)"
          use_portlet: "使用动态代码"
          portlet_content: "动态代码"
-         parent: "父分类"
-         children: "子分类"
+         parent: "父页面"
+         children: "子页面"
          contents: "内容"
          created_at: "创建时间"
          updated_at: "更新时间"

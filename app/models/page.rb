@@ -1,5 +1,6 @@
-class Category < ActiveRecord::Base
+class Page < ActiveRecord::Base
   acts_as_tree
+  belongs_to :template
   has_many :contents
   
   validates_presence_of :name_en,:name_zh_cn

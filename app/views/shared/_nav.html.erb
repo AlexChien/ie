@@ -7,7 +7,15 @@
 			<ul>
 				<li>
 					<a class='hide' href='<%=page.path%>'><b class='dazi'><%=page.name_en%></b></a>
+					<!--[if lte IE 6]>
+					<a href="<%=page.path%>"><b class="dazi"><%=page.name_en%></b>
+					<table><tr><td>
+					<![endif]-->
 					<%=raw find_all_subpages(page)%>
+					<!--[if lte IE 6]>
+					</td></tr></table>
+					</a>
+					<![endif]-->
 				</li>
 			</ul>
 		<%end%>

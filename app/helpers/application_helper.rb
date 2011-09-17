@@ -33,16 +33,29 @@ module ApplicationHelper
   def find_all_subpages(page)
     ret = ""
     if page.children.size > 0
-      ret += "<ul><li>"
+      ret += "<ul>"
       page.children.each do |subcat|
         if subcat.children.size > 0
-          ret += "<a class='hide' href='#{subcat.path}'>#{subcat.name_en}</a>"
+          ret += "<li><a class='hide' href='#{subcat.path}'>#{subcat.name_en}</a>"
+          ret += "
+                <!--[if lte IE 6]>
+      		      <a class='sub' href='#{subcat.path}'>#{subcat.name_en}
+      		      <table><tr><td>
+      		      <![endif]-->
+      		"
           ret += find_all_subpages(subcat)
+          ret += '
+                <!--[if lte IE 6]>
+      		      </td></tr></table>
+      		      </a>
+      		      <![endif]-->
+      		'
+          ret += "</li>"
         else
-          ret += "<a href='#{subcat.path}'>#{subcat.name_en}</a>"
+          ret += "<li><a href='#{subcat.path}'>#{subcat.name_en}</a></li>"
         end
       end
-      ret += "</li></ul>"
+      ret += "</ul>"
     end 
     ret
   end

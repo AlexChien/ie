@@ -1,0 +1,16 @@
+<div class="news">
+	<div class="title"><b style="font-size:13px;"><%= t(:media_name) %></b></div>
+	<!--新闻列表-->
+	<div>
+		<%contents=Content.list_contents("新闻中心",7)%>
+		<%contents.each do |content|%>
+			<div class="list">
+				<span><%=content.issue_date.strftime("%Y-%m")%></span><span class="line">|</span>
+				<span class="newstitle"><%=raw content.show_title%></span>
+				<div class="blank0"></div>
+			</div>
+		<%end%>
+	</div>
+	<!--新闻列表结束-->
+	<div class="more"><a class="font01" href="<%=Page.show_path('新闻中心')%>"><%= t(:media_more) %></a></div>
+</div>

@@ -5,6 +5,9 @@ class Page < ActiveRecord::Base
   
   scope :root_page, :conditions => ["parent_id is null"]
   scope :root_page_exclude_home, :conditions => ["parent_id is null and name_en != ?","Home"]
+  scope :eq_name_zh_cn, lambda {|name_zh_cn|
+    {:conditions => ["pages.name_zh_cn = ?", name_zh_cn] }
+  }
   
   validates_presence_of :name_en,:name_zh_cn
   validates_uniqueness_of :path
@@ -37,5 +40,24 @@ class Page < ActiveRecord::Base
       subpage = subcat.find_last_subpage
     end
     return subpage
+  end
+  
+  def find_all_subpage_ids(ids=[])
+    if self.children.size > 0
+      self.children.each do |subcat|
+        if subcat.children.size > 0
+          subcat.find_all_subpage_ids(ids)
+        else
+          ids << subcat.id
+        end
+      end
+    end
+    ids << self.id
+  end
+  
+  def self.show_path(name)
+    path = ''
+    p = Page.find_by_name_zh_cn(name)
+    p.path if p
   end
 end

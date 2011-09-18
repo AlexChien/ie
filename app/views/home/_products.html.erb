@@ -1,0 +1,22 @@
+<div class="products" >
+	<div class="title"><b style="font-size:13px;"><%= t(:pt_name) %></b></div>
+	<div class="products01">
+		<%contents=Content.list_contents("产品与技术",3)%>
+		<%contents.each do |content|%>
+			<div class="products01_a">
+				<div class="products01_a_img">
+					<a href="<%=content.show_link%>">
+						<%upload = content.uploads.first%>
+						<%if upload%>
+							<img src="<%=upload.uploaded_data.url%>">
+						<%end%>
+					</a>
+				</div>
+				<div class="products01_a_intro"><%=raw content.show_title%></div>
+				<div class="more"><a class="font01" href="<%=content.show_link%>"><%= t(:pt_detail) %></a></div>
+			</div>
+		<%end%>
+		
+		<div class="blank0"></div>
+	</div>
+</div>

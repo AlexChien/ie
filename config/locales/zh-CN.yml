@@ -166,7 +166,7 @@
        content:
          title: "标题(中文)"
          title_en: "标题(英文)"
-         category: "分类"
+         page: "页面"
          source: "来源(中文)"
          source_en: "来源(英文)"
          source_link: "外部链接url"
@@ -200,3 +200,7 @@
     
   site_name: "理想能源"
   search_name: "搜索"
+  media_name: "新闻中心"
+  media_more: "更多新闻"
+  pt_name: "产品与技术"
+  pt_detail: "详细信息"

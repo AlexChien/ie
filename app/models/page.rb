@@ -9,7 +9,7 @@ class Page < ActiveRecord::Base
     {:conditions => ["pages.name_zh_cn = ?", name_zh_cn] }
   }
   
-  validates_presence_of :name_en,:name_zh_cn
+  validates_presence_of :name_en,:name_zh_cn,:path,:template_id
   validates_uniqueness_of :name_en,:name_zh_cn,:path
   
   def name

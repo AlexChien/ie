@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20110916021926) do
 
   create_table "contents", :force => true do |t|
     t.string   "title"
-    t.integer  "category_id"
+    t.integer  "page_id"
     t.date     "issue_date"
     t.integer  "link_type",   :default => 0
     t.string   "source"

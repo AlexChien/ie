@@ -2,9 +2,9 @@
 	<div class="footernav">
 		<%Page.root_page_exclude_home.all.each_with_index do |page,index|%>
 			<%if index==0%>
-				<a href="<%=page.path%>"><%=page.name_en%></a>
+				<a href="<%=page.path%>"><%=page.show_columns('name')%></a>
 			<%else%>
-				|<a href="<%=page.path%>"><%=page.name_en%></a>
+				|<a href="<%=page.path%>"><%=page.show_columns('name')%></a>
 			<%end%>
 		<%end%>
 	</div>

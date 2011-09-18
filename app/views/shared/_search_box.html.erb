@@ -1,14 +1,17 @@
 <div class="search">
 	<table width="200" border="0" cellpadding="0" cellspacing="5">
 		<tr>
-			<td><form accept-charset="utf-8" method="get" action="/html/search.html" id="search_frm">
+			<td><form accept-charset="utf-8" method="get" action="/search" id="search_frm">
 				<input id="search_input" class="form" type="search" name="q" />
 			</form></td>
-			<td><a href="#" onClick="$('#search_frm').submit();"><img src="/images/search.png" /></a></td>
+			<td>
+				<input type="button" value="<%= t(:search_name) %>" onClick="$('#search_frm').submit();">
+				<!-- <a href="#" onClick="$('#search_frm').submit();"><img src="/images/search.png" /></a> -->
+			</td>
 			<td nowrap>&nbsp;</td>
-			<td nowrap><a id="lang_cn" href="#">中文</a></td>
+			<td nowrap><a id="lang_cn" href="#" onClick="set_locale('zh-CN','<%=params[:locale]%>');">中文</a></td>
 			<td nowrap>|</td>
-			<td nowrap><a id="lang_en" href="#">English</a></td>
+			<td nowrap><a id="lang_en" href="#" onClick="set_locale('en','<%=params[:locale]%>');">English</a></td>
 		</tr>
 	</table>
 </div>

@@ -1,0 +1,31 @@
+<div id="cse" style="width: 100%;">Loading</div>
+
+<% content_for :footer do -%>
+	<script type="text/javascript">
+	  cse_inited = true;
+	  google.load('search', '1', {language : 'zh-CN', style : google.loader.themes.ESPRESSO});
+	  google.setOnLoadCallback(function() {
+	    var customSearchControl = new google.search.CustomSearchControl('013607932426121157928:s0exwfoj8sw');
+		// var customSearchControl = new google.search.CustomSearchControl('008039657822625578505:60pqrtf_wbi');
+	    customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+		var options = new google.search.DrawOptions();
+	    options.setSearchFormRoot('cse-search-form');
+	    customSearchControl.draw('cse',options);
+		customSearchControl.execute('<%= params[:q] %>');
+	  }, true);
+	</script>
+
+	<script type="text/javascript" charset="utf-8">
+		function delayed_tb(){
+			setTimeout(function(){
+				tb_init('#cse .gs-title a[href*=keepThis]');
+			},2000);
+		}
+		$(function(){
+			$('#cse').bind('DOMSubtreeModified', function(){
+			    $('#cse').unbind('DOMSubtreeModified');
+				delayed_tb();
+			});
+		});
+	</script>
+<% end -%>

@@ -18,8 +18,9 @@ Ie::Application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
   
-  match ":path" => "pages#show"
+  match "search" => "search#index"
   root :to => "home#index"
+  match ":path" => "pages#show" 
   
   # map.logout    '/logout', :controller => 'sessions', :action => 'destroy'
   # map.login     '/login', :controller => 'sessions', :action => 'new'

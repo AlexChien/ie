@@ -3,7 +3,7 @@
 	<!--导航-->
 	<div class="menu">
 		<%#= render :partial => "shared/navigation" %>
-		<%Page.no_parent.all.each do |page|%>
+		<%Page.root_page.all.each do |page|%>
 			<ul>
 				<li>
 					<a class='hide' href='<%=page.path%>'><b class='dazi'><%=page.name_en%></b></a>

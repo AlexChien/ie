@@ -7,9 +7,13 @@
 
 	<%= include_stylesheets 'base' %>
 	<%= include_javascripts 'base' %>
-	
-	<%= yield :header %>
 
+	<%= yield :header %>
+	
+	<style type="text/css" media="screen">
+		.footernav a {color:#FFF; font-weight:bold;}
+		.copyright {color:#FFF;}
+	</style>
 </head>
 
 <body id="bg">
@@ -22,6 +26,8 @@
 			<%= render :partial => "shared/nav" %>
 
 			<%= yield %>
+			
+			<%= render :partial => "shared/footer" %>
 
 		</div>
 		<div class="sides"><img style="margin-top:65px;" src="/images/idea02.blue.png" /></div>

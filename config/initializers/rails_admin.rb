@@ -32,6 +32,8 @@ RailsAdmin.config do |config|
     field :name_zh_cn
     field :path
     field :template
+    field :parent
+    field :children
     field :html_content, :text do
       ckeditor true
     end
@@ -40,8 +42,6 @@ RailsAdmin.config do |config|
     end
     field :use_portlet
     field :portlet_content
-    field :parent
-    field :children
     field :contents
     include_fields :created_at, :updated_at
   end

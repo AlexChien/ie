@@ -1,0 +1,13 @@
+<div class="footer">
+	<div class="footernav">
+		<%Page.root_page_exclude_home.all.each_with_index do |page,index|%>
+			<%if index==0%>
+				<a href="<%=page.path%>"><%=page.name_en%></a>
+			<%else%>
+				|<a href="<%=page.path%>"><%=page.name_en%></a>
+			<%end%>
+		<%end%>
+	</div>
+	<div class="copyright">© 2010 Ideal Energy. All rights reserved</div>
+	<div class="blank0"></div>
+</div>

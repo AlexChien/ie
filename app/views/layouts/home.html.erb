@@ -7,9 +7,8 @@
 
 	<%= include_stylesheets 'base' %>
 	<%= include_javascripts 'base' %>
-
-	<%= yield :header %>
 	
+	<%= yield :header %>
 	<style type="text/css" media="screen">
 		.footernav a {color:#FFF; font-weight:bold;}
 		.copyright {color:#FFF;}
@@ -25,7 +24,26 @@
 
 			<%= render :partial => "shared/nav" %>
 
-			<%= yield %>
+			<div class="flash" id="hero">
+				<script type="text/javascript" src="/javascripts/swfobject.js"></script> 
+				<script type="text/javascript">
+				var so = new SWFObject("/swf/flash1.swf", "gallery", "944", "286", "6", "#ffffff");
+				so.addParam("quality", "high");
+				so.addParam("wmode", "transparent");
+				so.write("hero");
+				</script>
+			</div>
+			
+			<div class="content">
+
+				<%=render :partial=>"/home/products"%>
+
+				<%=render :partial=>"/home/news"%>
+
+				<div class="blank0"></div>
+
+			</div>
+			<div><img src="/images/contentbg.gif"></div>
 			
 			<%= render :partial => "shared/footer" %>
 

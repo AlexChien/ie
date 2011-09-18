@@ -10,7 +10,7 @@ class Page < ActiveRecord::Base
   }
   
   validates_presence_of :name_en,:name_zh_cn
-  validates_uniqueness_of :path
+  validates_uniqueness_of :name_en,:name_zh_cn,:path
   
   def name
     "#{name_zh_cn}(#{name_en})"

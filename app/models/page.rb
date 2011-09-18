@@ -24,11 +24,15 @@ class Page < ActiveRecord::Base
       else
         self.name_zh_cn
       end
-    when "html_content"
-      if I18n.locale.to_s == "en"
-        self.html_content
+    when "content"
+      if self.use_portlet
+        self.portlet_content
       else
-        self.html_content_en
+        if I18n.locale.to_s == "en"
+          self.html_content_en
+        else
+          self.html_content
+        end
       end
     end
   end

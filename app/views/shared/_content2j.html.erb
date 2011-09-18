@@ -1,0 +1,58 @@
+<%p=Page.find_by_path("/#{params[:path]}")%>
+<%if p%>
+	<%root=p.root%>
+	<%if root.children.empty?%>
+		<%= render :inline => p.show_columns('content').nil? ? '' : p.show_columns('content')%>
+	<%else%>
+		<div class="left">
+			<span><img src="/images/2j04.jpg"></span>
+			<span class="leftnav">
+				<div class="leftnav01"><%=root.show_columns('name')%></div>
+				
+				<%tree=false%>
+				<%current=false%>
+				<%sub_page=root.find_last_subpage%>
+				<%root.children.each do |c|%>
+					<%tree=true if c.children.size>0%>
+					<%if p==c%>
+						<%current=c%>
+					<%else%>
+						<%current=sub_page if sub_page==c%>
+					<%end%>
+				<%end%>
+				<%if tree%>
+					<script type="text/javascript">	
+						jQuery(function(){initTreeView();});
+					</script>
+					<ul id="navtree" class="navtree filetree treeview-famfamfam treeview">
+						<%root.children.each do |c|%>
+							<li>
+								<span><a style="color:green;font-weight:bold;" href="<%=c.path%>"><%=c.show_columns("name")%></a></span>
+								<%unless c.children.empty?%>
+									<ul>
+										<%c.children.each do |cc|%>
+											<li><a href="<%=cc.path%>" id="<%=cc.path.gsub('/','')%>"><%=cc.show_columns("name")%></a></li>
+										<%end%>
+									</ul>
+								<%end%>
+							</li>
+						<%end%>
+					</ul>
+				<%else%>
+					<div class="leftnav03">
+						<ul>
+							<%root.children.each do |c|%>
+								<li <%if current == c%>class="current"<%end%>><a href="<%=c.path%>"><%=c.show_columns('name')%></a></li>
+							<%end%>
+						</ul>
+					</div>
+				<%end%>
+			</span>
+			<span><img src="/images/2j04.jpg"></span>
+		</div>
+		<div class="right">
+
+		</div>
+		<div class="blank0"></div>
+	<%end%>
+<%end%>

@@ -20,7 +20,11 @@ $(document).ready(function(){
 		curLang = document.location.href.split('html/')[1].split('/')[0];
 	} else {
 		var loc = document.location.href.replace('?','/');
-		curLang = loc.split('lang-')[1].split('/')[0];
+		if(loc.split('lang-')[1]==undefined){
+			curLang = loc.split('lang-')[1];
+		}else{
+			curLang = loc.split('lang-')[1].split('/')[0];
+		}
 	}
 	var langs = ["cn","en"];
 	for(var i=0;i<langs.length;i++){

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <r:meta:language />  -->
+	<title><%= t(:site_name) %></title>
+
+	<%= include_stylesheets "base" %>
+	<%= include_javascripts "base" %>
+</head>
+<body id="bg2j">
+	<div id="idea">
+		<div class="sides"><img src="/images/2j01.blue.png" /></div>
+		<div class="idea">
+
+			<%= render :partial => "shared/search_box" %>
+			<%= render :partial => "shared/nav" %>
+
+			<div class="picture"><img src="/images/2j03.blue.jpg" /></div>
+			<div class="content2j">
+				<%= render :partial => "shared/content2j"%>
+			</div>
+
+			<%= render :partial => "shared/footer" %>
+			
+		</div>
+		<div class="sides"><img src="/images/2j02.blue.png" /></div>
+	</div>
+	
+	<%= render :partial => "shared/ga" %>
+</body>
+</html>

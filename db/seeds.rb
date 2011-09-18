@@ -16,8 +16,6 @@ t_default=Template.create(:name=>"default",
 
 	<%= include_stylesheets "base" %>
 	<%= include_javascripts "base" %>
-
-	<%= yield :header %>
 </head>
 <body id="bg2j">
 	<div id="idea">
@@ -29,7 +27,7 @@ t_default=Template.create(:name=>"default",
 
 			<div class="picture"><img src="/images/2j03.blue.jpg" /></div>
 			<div class="content2j">
-				<%= yield %>
+				<%= render :partial => "shared/content2j"%>
 			</div>
 
 			<%= render :partial => "shared/footer" %>
@@ -81,9 +79,9 @@ t_home=Template.create(:name=>"home",
 
 			<div class="content">
 
-				<%=render :partial=>"/home/products"%>
+				<%=render :partial=>"home/products"%>
 
-				<%=render :partial=>"/home/news"%>
+				<%=render :partial=>"home/news"%>
 
 				<div class="blank0"></div>
 

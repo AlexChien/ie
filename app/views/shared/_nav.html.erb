@@ -1,14 +1,21 @@
+<%if I18n.locale.to_s=="en"%>
+<style type="text/css" media="screen">
+	.dazi {font-size:13px;}
+</style>
+<%end%>
+
 <div class="header">
 	<div class="logo"><a href="/html/cn/index.html"><img src="/images/logo.jpg" /></a></div>
 	<!--导航-->
 	<div class="menu">
 		<%#= render :partial => "shared/navigation" %>
 		<%Page.root_page.all.each do |page|%>
+			<%page_name=page.show_columns('name')%>
 			<ul>
 				<li>
-					<a class='hide' href='<%=page.path%>'><b class='dazi'><%=page.name_en%></b></a>
+					<a class='hide' href='<%=page.path%>' <%=add_style(page_name)%>><b class='dazi'><%=page_name%></b></a>
 					<!--[if lte IE 6]>
-					<a href="<%=page.path%>"><b class="dazi"><%=page.name_en%></b>
+					<a href="<%=page.path%>"><b class="dazi"><%=page_name%></b>
 					<table><tr><td>
 					<![endif]-->
 					<%=raw find_all_subpages(page)%>

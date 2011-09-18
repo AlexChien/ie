@@ -35,11 +35,12 @@ module ApplicationHelper
     if page.children.size > 0
       ret += "<ul>"
       page.children.each do |subcat|
+        subcat_name = subcat.show_columns('name')
         if subcat.children.size > 0
-          ret += "<li><a class='hide' href='#{subcat.path}'>#{subcat.name_en}</a>"
+          ret += "<li><a class='hide' href='#{subcat.path}'>#{subcat_name}</a>"
           ret += "
                 <!--[if lte IE 6]>
-      		      <a class='sub' href='#{subcat.path}'>#{subcat.name_en}
+      		      <a class='sub' href='#{subcat.path}'>#{subcat_name}
       		      <table><tr><td>
       		      <![endif]-->
       		"
@@ -52,11 +53,19 @@ module ApplicationHelper
       		'
           ret += "</li>"
         else
-          ret += "<li><a href='#{subcat.path}'>#{subcat.name_en}</a></li>"
+          ret += "<li><a href='#{subcat.path}'>#{subcat_name}</a></li>"
         end
       end
       ret += "</ul>"
     end 
     ret
+  end
+  
+  def add_style(page_name)
+    str = ""
+    if I18n.locale.to_s=="en"
+      str = "style='width:#{page_name.length*7+18}px;'"
+    end
+    return str
   end
 end

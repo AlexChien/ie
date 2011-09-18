@@ -7,9 +7,27 @@ class Page < ActiveRecord::Base
   scope :root_page_exclude_home, :conditions => ["parent_id is null and name_en != ?","Home"]
   
   validates_presence_of :name_en,:name_zh_cn
+  validates_uniqueness_of :path
   
   def name
     "#{name_zh_cn}(#{name_en})"
+  end
+  
+  def show_columns(column)
+    case column
+    when "name"
+      if I18n.locale.to_s == "en"
+        self.name_en
+      else
+        self.name_zh_cn
+      end
+    when "html_content"
+      if I18n.locale.to_s == "en"
+        self.html_content
+      else
+        self.html_content_en
+      end
+    end
   end
   
   def find_last_subpage

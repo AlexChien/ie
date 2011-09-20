@@ -13,7 +13,7 @@ class Content < ActiveRecord::Base
     p=Page.eq_name_zh_cn(page_name).first
     if p
       ids = p.find_all_subpage_ids
-      self.in_ids(ids).all(:order=>"contents.issue_date DESC",:limit=>limit)
+      self.in_ids(ids).all(:order=>"contents.issue_date DESC,contents.created_at DESC",:limit=>limit)
     else
       []
     end
@@ -47,7 +47,7 @@ class Content < ActiveRecord::Base
     when 0
       self.show_columns('title')
     when 1
-      "<a href='#{self.source_link}'>#{self.show_columns('title')}</a>"
+      "<a target='_blank' href='#{self.source_link}'>#{self.show_columns('title')}</a>"
     when 2
       "<a href='/contents/#{self.id}'>#{self.show_columns('title')}</a>"
     end

@@ -13,7 +13,11 @@ class Page < ActiveRecord::Base
   validates_uniqueness_of :name_en,:name_zh_cn,:path
   
   def name
-    "#{name_zh_cn}(#{name_en})"
+    if I18n.locale.to_s == "en"
+      self.name_en
+    else
+      self.name_zh_cn
+    end
   end
   
   def show_columns(column)

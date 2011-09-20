@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <r:meta:language />  -->
+	<title><%= t(:site_name) %></title>
+
+	<%= include_stylesheets "base" %>
+	<%= include_javascripts "base" %>
+</head>
+<body id="bggreen">
+	<div id="idea">
+		<div class="sides"><img src="/images/2j01.blue.png" /></div>
+		<div class="idea">
+
+			<%= render :partial => "shared/search_box" %>
+			<%= render :partial => "shared/nav" %>
+
+			<div class="picture"><img src="/images/job-list.jpg" /></div>
+			<div class="content2j">
+				<%root = Page.find_by_name_zh_cn("人力资源")%>
+				<%if root%>
+				<div class="left">
+					<span><img src="/images/2j04.jpg"></span>
+					<span class="leftnav">
+						<div class="leftnav01"><%=root.show_columns('name')%></div>
+						
+						<%current=false%>
+						<%sub_page=root.find_last_subpage%>
+						<%root.children.each do |c|%>
+							<%if root==c%>
+								<%current=c%>
+							<%else%>
+								<%current=sub_page if sub_page==c%>
+							<%end%>
+						<%end%>
+						<div class="leftnav03">
+							<ul>
+								<%root.children.each do |c|%>
+									<li <%if current == c%>class="current"<%end%>><a href="<%=c.path%>"><%=c.show_columns('name')%></a></li>
+								<%end%>
+							</ul>
+						</div>
+					</span>
+					<span><img src="/images/2j04.jpg"></span>
+				</div>
+				<div class="right">
+				        <p>理想能源设备（上海）有限公司专注于研究、开发、设计、生产世界顶尖的太阳能电池关键生产设备。公司的核心团队，由多位在该领域长期工作的世界级设备和工艺专家，以及许多经验累积丰富的资深中国工程师所组成。</p>
+				        <p>作为一家国际性公司，多元的文化背景和研发世界顶尖科技产品所带来的成就，激励着每一个员工奋发努力，不断进取。公司提供系统的在职培训和即时的相互交流，帮助员工提升个人价值；与此同时，公司也提供极具竞争力的薪资待遇和福利。</p>
+				        <p>如果您想完成为地球提供理想能源的使命，加入理想能源！</p>
+				        <div class="job01">Position: <%=@job.job_name_en%><a>职位：<%=@job.job_name%></a> </div>
+				        <div class="job02">Specific responsibilities（岗位职责）</div>
+				        <div class="job03">
+							<%=raw @job.responsibility%>
+				        </div>
+				        <div class="job02">Requirements (任职资格)</div>
+				        <div class="job03">
+							<%=raw @job.requirement%>
+				        </div>
+				      </div>
+				<div class="blank0"></div>
+				<%end%>
+			</div>
+
+			<%= render :partial => "shared/footer" %>
+
+		</div>
+		<div class="sides"><img src="/images/2j02.blue.png" /></div>
+	</div>
+
+	<%= render :partial => "shared/ga" %>
+</body>
+</html>

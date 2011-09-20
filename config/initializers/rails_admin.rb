@@ -50,7 +50,9 @@ RailsAdmin.config do |config|
     field :title
     field :title_en
     field :page
-    field :issue_date
+    field :issue_date, :date do
+      strftime_format "%Y-%m-%d"
+    end 
     field :link_type, :enum do
       enum do
         [["无链接",0], ["自行填写",1],["自动生成",2]]

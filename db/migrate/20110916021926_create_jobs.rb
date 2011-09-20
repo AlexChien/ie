@@ -4,7 +4,7 @@ class CreateJobs < ActiveRecord::Migration
       t.string :job_name
       t.string :job_name_en
       t.integer :department_id
-      t.integer :job_type, :integer, :default => 0
+      t.integer :job_type, :default => 0
       t.text :responsibility
       t.text :requirement
       t.timestamps

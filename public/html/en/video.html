@@ -17,13 +17,13 @@
 
 	<script type="text/javascript" src="/javascripts/jwplayer.js"></script> 
 	<script type="text/javascript">
-	var swf = "/swf/"+ querySt("file");
+	var swf = querySt("file");
 	jwplayer("mediaplayer").setup({
 		flashplayer: "/swf/player.swf",
 		width: "480",
 		height: "360",
 		autostart: 'true',
-		file: "/swf/"+querySt("file")
+		file: querySt("file")
 	});
 	</script> 
 	<!-- END OF THE PLAYER EMBEDDING -->

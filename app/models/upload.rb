@@ -14,6 +14,12 @@ class Upload < ActiveRecord::Base
   #                           :less_than => 10.megabyte,
   #                           :message => "上传文件小于10M"
   
+  scope :in_file_type, lambda {|file_type|
+    {:conditions => ["uploads.file_type in (?)", file_type] }
+  }
+  
+  # file_type [["图片",0], ["flv",1],["其它",99]]
+  
   # handling delete in your model, if needed. Replace all image occurences with your asset name.
   attr_accessor :delete_uploaded_data
   before_save { self.uploaded_data = nil if self.delete_uploaded_data == '1' }

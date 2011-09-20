@@ -53,7 +53,7 @@ RailsAdmin.config do |config|
     field :issue_date
     field :link_type, :enum do
       enum do
-        [["无链接",0], ["外部链接",1],["内部链接",2]]
+        [["无链接",0], ["自行填写",1],["自动生成",2]]
       end
     end
     include_fields :source, :source_en, :source_link

@@ -169,7 +169,7 @@
          page: "页面"
          source: "来源(中文)"
          source_en: "来源(英文)"
-         source_link: "外部链接url"
+         source_link: "自行填写链接url"
          link_type: "链接类型"
          issue_date: "发布日期"
          uploads: "资源"

@@ -7,7 +7,7 @@ class Content < ActiveRecord::Base
   scope :in_ids, lambda {|ids|
     { :include=> [:page],:conditions => ["pages.id in (?)", ids] }
   }
-  # link_type [["无链接",0], ["外部链接",1],["内部链接",2]]
+  # link_type [["无链接",0], ["自行填写",1],["自动生成",2]]
   
   def self.list_contents(page_name,limit=nil)
     p=Page.eq_name_zh_cn(page_name).first

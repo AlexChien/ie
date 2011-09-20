@@ -32,14 +32,15 @@ function querySt(ji) {
 }
 
 function set_locale(to_locale,from_locale) {
-	var path = document.location.href;
+	var path = location.href;
 	if(from_locale==""){
 		if(path.match(/.*\?.*/)){
-			location.href = path + "&locale=" + to_locale;
+			path = path + "&locale=" + to_locale;
 		}else{
-			location.href = path + "?locale=" + to_locale;
+			path = path + "?locale=" + to_locale;
 		}
 	}else{
-		location.href = path.replace("locale="+from_locale,"locale="+to_locale);
+		path = path.replace("locale="+from_locale,"locale="+to_locale);
 	}
+	location.href = path;
 }

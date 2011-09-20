@@ -51,7 +51,7 @@
 			<span><img src="/images/2j04.jpg"></span>
 		</div>
 		<div class="right">
-
+			<%= render :inline => p.show_columns('content').nil? ? '' : p.show_columns('content')%>
 		</div>
 		<div class="blank0"></div>
 	<%end%>

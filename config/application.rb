@@ -41,7 +41,7 @@ module Ie
     
     # config.i18n.default_locale = 'zh-CN'
     
-    config.serve_static_assets = true
+    # config.serve_static_assets = true
     
     # Enable the asset pipeline
     config.assets.enabled = true

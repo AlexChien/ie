@@ -1,2 +1,0 @@
-module PanelCategoriesHelper
-end

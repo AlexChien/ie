@@ -38,6 +38,6 @@ Ie::Application.configure do
   config.action_mailer.perform_deliveries = true
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_charset = "utf-8"
+  config.action_mailer.default :charset => "utf-8"
 end
 

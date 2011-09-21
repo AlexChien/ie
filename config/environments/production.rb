@@ -48,7 +48,7 @@ Ie::Application.configure do
   config.active_support.deprecation = :notify
   
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => "ok.enjoyoung.cn" }
+  config.action_mailer.default_url_options = { :host => "www.idealenergy.com" }
   config.action_mailer.smtp_settings = {
     :address => "mail.enjoyoung.cn",
     :port => 25,
@@ -63,5 +63,5 @@ Ie::Application.configure do
   config.action_mailer.perform_deliveries = true
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_charset = "utf-8"
+  config.action_mailer.default :charset => "utf-8"
 end

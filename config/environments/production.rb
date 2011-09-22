@@ -7,7 +7,14 @@ Ie::Application.configure do
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
+  
   config.action_controller.perform_caching = true
+  config.cache_store = :file_store, "tmp/cache"
+  
+  # production下使用Rack::Cache就报错
+  # http://jackchu.com/rails-31-asset-pipeline-content-delivery-netw
+  require 'rack/cache'
+  config.middleware.delete Rack::Cache
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"

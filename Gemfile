@@ -17,6 +17,11 @@ gem "jquery-rails"
 # Use unicorn as the web server
 # gem 'unicorn'
 
+# vps occur the error
+# Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+gem 'execjs'
+gem 'therubyracer'
+
 # Deploy with Capistrano
 gem 'capistrano'
 gem 'mysql2', '0.3.7'

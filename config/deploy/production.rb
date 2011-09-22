@@ -1,4 +1,4 @@
-set :application, "ie"
+set :application, "iev2"
 set :domain,      "69.164.193.254"
 set :repository,  "git@github.com:AlexChien/ie.git"
 set :use_sudo,    false
@@ -19,7 +19,7 @@ ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id_rsa"]
 
 set :scm, :git
 set :scm_verbose, true
-set :branch, "master"
+set :branch, "v2"
 
 set :deploy_via, :remote_cache
 
@@ -37,7 +37,7 @@ namespace :deploy do
   # add soft link script for deploy
   desc "Symlink the upload directories"
   after "deploy:symlink", :roles => [:web] do
-    asset_packager
+    # asset_packager
     migrate
   end  
   

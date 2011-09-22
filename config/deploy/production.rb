@@ -38,6 +38,8 @@ namespace :deploy do
   desc "Symlink the upload directories"
   after "deploy:symlink", :roles => [:web] do
     # asset_packager
+    run "ln -nfs #{deploy_to}/#{shared_dir}/assets #{deploy_to}/#{current_dir}/public/assets"
+    run "ln -nfs #{deploy_to}/#{shared_dir}/ckeditor_assets #{deploy_to}/#{current_dir}/public/ckeditor_assets"
     migrate
   end  
   

@@ -63,7 +63,7 @@ RailsAdmin.config do |config|
     end
     include_fields :created_at, :updated_at
   end
-
+  
   config.model Upload do
     field :name
     field :file_type, :enum do

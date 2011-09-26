@@ -12,22 +12,17 @@
 RailsAdmin.config do |config|
 
   config.included_models = ["Story","User","Template","Page","Content","Upload","Department","Job"]
-
-  config.model User do
-    list do
-      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
-                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
-    end
-    edit do
-      include_fields :email, :password, :password_confirmation
-    end
-    export do
-      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
-                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+  
+  config.model Story do
+    weight -50
+    exclude_fields :id
+    list do 
+      sort_by :pubdate
     end
   end
   
   config.model Page do
+    weight -40
     field :name_en
     field :name_zh_cn
     field :path
@@ -85,6 +80,8 @@ RailsAdmin.config do |config|
   end
   
   config.model Job do
+    weight 30
+    
     field :job_name
     field :job_name_en
     field :department
@@ -102,6 +99,29 @@ RailsAdmin.config do |config|
     include_fields :created_at, :updated_at
   end
   
+  config.model Department do
+    weight 40
+  end
+  
+  config.model User do
+    weight 50
+    
+    list do
+      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
+                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+    end
+    edit do
+      include_fields :email, :password, :password_confirmation
+    end
+    export do
+      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
+                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+    end
+  end
+  
+  config.model Template do
+    weight 60
+  end
   #  ==> Authentication (before_filter)
   # This is run inside the controller instance so you can setup any authentication you need to.
   # By default, the authentication will run via warden if available.
@@ -136,7 +156,7 @@ RailsAdmin.config do |config|
   
   #  ==> Dev. settings
   # Reload rails_admin with each request (can be slow) in development mode
-  # config.reload_between_requests = true
+  config.reload_between_requests = true if Rails.env.development?
   
   #  ==> Global show view settings
   # Display empty fields in show views

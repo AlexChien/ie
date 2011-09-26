@@ -122,13 +122,13 @@
 
     models:
        story: "首页新闻"
-       user: "用户"
+       user: "管理员"
        template: "模版"
        page: "页面"
        content: "内容"
        upload: "资源"
-       department: "部门"
-       job: "职位"
+       department: "HR部门"
+       job: "HR职位"
 
     attributes:
        story:

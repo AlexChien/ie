@@ -97,7 +97,7 @@ _margin-left:0px; color:#999; }
 .job ul { margin:10px;}
 .job li { line-height:30px; border-bottom:1px dotted #CCC; }
 .job a { color:#47b030; margin-left:10px; }
-.job span { float:left; display:block;}
+.job ul span { float:left; display:block;}
 .job01 { width:640px; text-align:center; font-size:14px; font-weight:bold; margin:20px auto 10px auto; border-top:1px solid #47b030; line-height:40px;}
 .job01 a { color:#47b030; margin-left:10px;}
 .job02 { height:20px; line-height:20px; width:630px; margin:15px auto; background:#47b030; color:#FFF; font-weight:bold; padding:0px 5px;}
@@ -196,3 +196,10 @@ a.disabled { color:#999; }
 .m_team_pic { width:135px; height:180px; float:left; }
 .m_team_intro { width:490px; float:left; margin-left:24px; float:left; padding-top:8px; line-height:20px;}
 
+/* pagination */
+.pagination {padding: 5px; margin: 5px; text-align:center}
+.pagination a {padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #ccc; text-decoration: none;}
+.pagination a:hover, .pagination a:active {border: 1px solid #429ED1; background-color: #C8E8F3;}
+.pagination span.current {padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #429ED1; font-weight: bold; background-color: #C8E8F3;}
+.pagination span.disabled {padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #eee; color: #ddd}
+/* pagination */

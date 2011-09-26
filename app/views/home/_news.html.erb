@@ -2,11 +2,11 @@
 	<div class="title"><b style="font-size:13px;"><%= t(:media_name) %></b></div>
 	<!--新闻列表-->
 	<div>
-		<%contents=Content.list_contents("新闻中心",7)%>
+		<%contents=Story.recent%>
 		<%contents.each do |content|%>
 			<div class="list">
-				<span><%=content.issue_date.strftime("%Y-%m")%></span><span class="line">|</span>
-				<span class="newstitle"><%=raw content.show_title%></span>
+				<span><%=content.pubdate.strftime("%Y-%m")%></span><span class="line">|</span>
+				<span class="newstitle"><%= link_helper(t_column(content,"title"), content.try(:path)) %></span>
 				<div class="blank0"></div>
 			</div>
 		<%end%>

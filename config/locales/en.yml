@@ -8,3 +8,7 @@ en:
   media_more: "more"
   pt_name: "Products & Technologies"
   pt_detail: "more"
+    
+  activerecord:    
+    models:
+       story: "Home News"

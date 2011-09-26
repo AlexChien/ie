@@ -121,6 +121,7 @@
         even: "必须为双数"
 
     models:
+       story: "首页新闻"
        user: "用户"
        template: "模版"
        page: "页面"
@@ -130,6 +131,11 @@
        job: "职位"
 
     attributes:
+       story:
+         title_en: "标题(英文)"
+         title_zh_cn: "标题(中文)"
+         path: "访问url"
+         pubdate: "新闻时间"
        user:
          login: "用户名"
          name: "昵称"

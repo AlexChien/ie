@@ -11,7 +11,7 @@
 
 RailsAdmin.config do |config|
 
-  config.included_models = ["User","Template","Page","Content","Upload","Department","Job"]
+  config.included_models = ["Story","User","Template","Page","Content","Upload","Department","Job"]
 
   config.model User do
     list do

@@ -68,4 +68,17 @@ module ApplicationHelper
     end
     return str
   end
+  
+  def t_column(obj,column)
+    obj["#{column}_#{I18n.locale.to_s.gsub('-','_').downcase}"]
+  end
+  
+  def link_helper(label,url)
+    url.strip!
+    if url == "" || url == "#"
+      label
+    else
+      raw "<a href='#{url}' target='_blank'>#{label}</a>"
+    end
+  end
 end

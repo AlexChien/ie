@@ -20,7 +20,13 @@
 
 			<div class="picture"><img src="/images/2j03.blue.jpg" /></div>
 			<div class="content2j">
-				<%= yield %>
+				<% if devise_controller? %>
+					<div class="toolbox" style="position:relative:overflow:hidden;width:500px;margin:auto;">
+						<%= yield %>
+					</div>
+				<% else %>
+					<%= yield %>
+				<% end %>
 			</div>
 
 			<%= render :partial => "shared/footer" %>

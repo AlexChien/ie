@@ -11,7 +11,9 @@
 
 RailsAdmin.config do |config|
 
-  config.included_models = ["Story","User","Template","Page","Content","Upload","Department","Job"]
+  config.authorize_with :cancan
+
+  config.included_models = ["Story","User","Template","Page","Content","Upload","Department","Job","Role"]
   
   config.model Story do
     weight -50
@@ -150,15 +152,20 @@ RailsAdmin.config do |config|
     
     list do
       include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
-                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+                     :last_sign_in_ip, :failed_attempts, :roles, :created_at, :updated_at
     end
     edit do
-      include_fields :email, :password, :password_confirmation
+      include_fields :email, :password, :password_confirmation, :roles
     end
     export do
       include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
-                     :last_sign_in_ip, :failed_attempts, :created_at, :updated_at
+                     :last_sign_in_ip, :failed_attempts, :roles, :created_at, :updated_at
     end
+  end
+  
+  config.model Role do
+    weight 55
+    parent User
   end
   
   config.model Template do

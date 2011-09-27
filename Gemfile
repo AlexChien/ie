@@ -29,6 +29,7 @@ gem 'ckeditor'
 
 gem 'fastercsv'
 gem 'devise'
+gem "cancan"
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)

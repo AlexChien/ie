@@ -4,7 +4,9 @@ class ApplicationController < ActionController::Base
 
   # include AuthenticatedSystem
 
-  # rescue_from 'Acl9::AccessDenied', :with => :access_denied
+  rescue_from CanCan::AccessDenied do |exception|
+    redirect_to "/", :alert => exception.message
+  end
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
@@ -15,10 +17,4 @@ class ApplicationController < ActionController::Base
     I18n.locale = session[:locale] || I18n.default_locale
   end
 
-protected
-  # def access_denied
-  #   flash[:error] = '你没有登陆或者没有权限执行此操作。'
-  #   redirect_to login_path
-  # end
-  # 
 end

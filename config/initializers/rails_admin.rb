@@ -16,8 +16,21 @@ RailsAdmin.config do |config|
   config.model Story do
     weight -50
     exclude_fields :id
-    list do 
+    field :pubdate, :date do
+      strftime_format "%Y-%m-%d"
+    end
+    list do
       sort_by :pubdate
+      field :title_en do
+        pretty_value do
+          bindings[:object].title_en.to_s.truncate_words(15)
+        end
+      end
+      field :title_zh_cn do
+        pretty_value do
+          bindings[:object].title_zh_cn.to_s.truncate_words(15)
+        end
+      end
     end
   end
   
@@ -39,6 +52,9 @@ RailsAdmin.config do |config|
     field :portlet_content
     field :contents
     include_fields :created_at, :updated_at
+    list do
+      exclude_fields :html_content,:html_content_en,:use_portlet,:portlet_content,:contents
+    end
   end
   
   config.model Content do
@@ -53,7 +69,8 @@ RailsAdmin.config do |config|
         [["无链接",0], ["自行填写",1],["自动生成",2]]
       end
     end
-    include_fields :source, :source_en, :source_link
+    include_fields :source, :source_en
+    field :source_link
     field :uploads
     field :desc, :text do
       ckeditor true
@@ -62,6 +79,24 @@ RailsAdmin.config do |config|
       ckeditor true
     end
     include_fields :created_at, :updated_at
+    list do
+      field :title do
+        pretty_value do
+          bindings[:object].title.to_s.truncate_words(15)
+        end
+      end
+      field :title_en do
+        pretty_value do
+          bindings[:object].title_en.to_s.truncate_words(15)
+        end
+      end
+      field :source_link do
+        pretty_value do
+          bindings[:object].source_link.to_s.truncate_words(15)
+        end
+      end
+      exclude_fields :uploads,:desc,:desc_en
+    end
   end
   
   config.model Upload do
@@ -77,6 +112,9 @@ RailsAdmin.config do |config|
     end
     field :resource
     include_fields :created_at, :updated_at
+    list do
+      exclude_fields :uploaded_data
+    end
   end
   
   config.model Job do
@@ -97,6 +135,9 @@ RailsAdmin.config do |config|
       ckeditor true
     end
     include_fields :created_at, :updated_at
+    list do
+      exclude_fields :responsibility,:requirement
+    end
   end
   
   config.model Department do
@@ -122,6 +163,10 @@ RailsAdmin.config do |config|
   
   config.model Template do
     weight 60
+    
+    list do
+      exclude_fields :id,:layout
+    end
   end
   #  ==> Authentication (before_filter)
   # This is run inside the controller instance so you can setup any authentication you need to.

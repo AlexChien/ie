@@ -101,6 +101,7 @@ RailsAdmin.config do |config|
   
   config.model Department do
     weight 40
+    parent Job
   end
   
   config.model User do

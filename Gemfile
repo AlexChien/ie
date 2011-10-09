@@ -22,8 +22,6 @@ gem "jquery-rails"
 gem 'execjs'
 gem 'therubyracer'
 
-# Deploy with Capistrano
-gem 'capistrano'
 gem 'mysql2', '0.3.7'
 gem 'ckeditor'
 
@@ -49,5 +47,7 @@ group :development, :test do
   gem 'turn', :require => false
   gem 'webrat'
   gem 'rails-footnotes', '3.7.4'
-  gem 'web-app-theme', '>= 0.6.2'
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'capistrano-ext'
 end

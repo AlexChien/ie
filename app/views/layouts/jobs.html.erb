@@ -57,6 +57,10 @@
 				        <div class="job03">
 							<%=raw @job.requirement%>
 				        </div>
+						<center>
+							<input type="button" value="申请职位" onclick="location.href='mailto:hr@idealenergy.com?subject=<%=URI::encode("申请职位：#{@job.job_name}")%>';">			
+							<input type="button" value="返回" onclick="location.href='/job-list';">
+						</center>
 				      </div>
 				<div class="blank0"></div>
 				<%end%>

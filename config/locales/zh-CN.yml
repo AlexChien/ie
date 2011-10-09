@@ -129,6 +129,7 @@
        upload: "资源"
        department: "HR部门"
        job: "HR职位"
+       role: "权限"
 
     attributes:
        story:
@@ -148,6 +149,7 @@
          current_sign_in_ip: "当前登陆ip"
          last_sign_in_ip: "最后登陆ip"
          failed_attempts: "错误尝试次数"
+         roles: "权限"
          created_at: "创建时间"
          updated_at: "更新时间"
        template:
@@ -204,6 +206,8 @@
          job_type: "类别"
          responsibility: "岗位职责"
          requirement: "任职资格"
+       role:
+         name: "权限名"
     
   site_name: "理想能源"
   search_name: "搜索"

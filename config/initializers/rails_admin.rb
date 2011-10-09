@@ -159,9 +159,10 @@ RailsAdmin.config do |config|
   
   config.model User do
     weight 50
+    field :roles, :has_and_belongs_to_many_association
     
     list do
-      include_fields :email, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
+      include_fields :email, :roles, :sign_in_count, :current_sign_in_at, :last_sign_in_at, :current_sign_in_ip,
                      :last_sign_in_ip, :failed_attempts, :roles, :created_at, :updated_at
     end
     edit do

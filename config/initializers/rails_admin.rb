@@ -57,6 +57,16 @@ RailsAdmin.config do |config|
     list do
       exclude_fields :html_content,:html_content_en,:use_portlet,:portlet_content,:contents
     end
+    edit do
+      field :contents do
+        orderable true
+      end
+      
+      field :children do
+        orderable true
+      end
+
+    end
   end
   
   config.model Content do

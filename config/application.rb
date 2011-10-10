@@ -45,6 +45,21 @@ module Ie
     
     # Enable the asset pipeline
     config.assets.enabled = true
+    
+    # add path to assets path
+    # config.assets.paths << "#{Rails.root}/app/assets/flash"
+    
+    # enable production like assets behavior in development env
+    # config.assets.debug = false
+    
+    # enable MD5 fingerprint in filename
+    # config.assets.digest = true
+
+    # Compiled assets are written to the location specified in config.assets.prefix. The default setting will use the public/assets directory.
+    # config.assets.prefix = 'public/assets'
+    
+    # If you have other manifests or individual stylesheets and JavaScript files to include, you can add them to the precompile array:
+    # config.assets.precompile += ['admin.js', 'admin.css', 'swfObject.js']
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

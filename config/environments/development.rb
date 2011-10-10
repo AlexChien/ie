@@ -39,5 +39,11 @@ Ie::Application.configure do
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default :charset => "utf-8"
+  
+  # Do not compress assets
+  config.assets.compress = false
+ 
+  # Expands the lines which load the assets
+  config.assets.debug = true
 end
 

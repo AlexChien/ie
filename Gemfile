@@ -19,7 +19,7 @@ gem "jquery-rails"
 # gem 'unicorn'
 
 # vps occur the error
-# Could not find a JavaScript runtime. See https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+# Could not find a JavaScript runtime. Se`e https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
 gem 'execjs'
 gem 'therubyracer'
 

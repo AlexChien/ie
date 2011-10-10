@@ -30,24 +30,26 @@ role :db,  domain, :primary => true
 namespace :deploy do
   
   desc "Generate database.yml and Create asset packages for production, minify and compress js and css files"
-  after "deploy:update_code", :roles => [:web] do
+  # after "deploy:update_code", :roles => [:web] do
+  after "deploy:finalize_update", :roles => [:web] do
+    # database_yml task cannot be put in after "deploy:update_code" trigger
+    # it will conflict with asset:precompile
     database_yml
+    # asset_packager
+    
   end
   
   # add soft link script for deploy
   desc "Symlink the upload directories"
   after "deploy:symlink", :roles => [:web] do
-    # asset_packager
-    run "ln -nfs #{deploy_to}/#{shared_dir}/assets #{deploy_to}/#{current_dir}/public/assets"
-    run "ln -nfs #{deploy_to}/#{shared_dir}/ckeditor_assets #{deploy_to}/#{current_dir}/public/ckeditor_assets"
-    migrate
+    # symlink assets is done by capistrano interal task
+    # run "ln -s #{shared_path}/assets #{current_release}/public/assets"
+    # migrate
   end  
   
   desc "Create asset packages for production, minify and compress js and css files"
   task :asset_packager, :roles => [:web] do
-    run <<-EOF
-    cd #{release_path} && rake RAILS_ENV=production asset:packager:build_all
-    EOF
+    # run "cd #{release_path}; RAILS_ENV=production rake assets:precompile"
   end
   
   task :start, :roles => :app do

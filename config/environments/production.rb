@@ -11,10 +11,16 @@ Ie::Application.configure do
   config.action_controller.perform_caching = true
   config.cache_store = :file_store, "tmp/cache"
   
-  # production下使用Rack::Cache就报错
+  # rails3.1.0 production下使用Rack::Cache就报错
   # http://jackchu.com/rails-31-asset-pipeline-content-delivery-netw
   # require 'rack/cache'
   # config.middleware.delete Rack::Cache
+  
+  # rails3.1.1
+  # Update to rack-cache 1.1.
+  # Versions prior to 1.1 delete the If-Modified-Since and If-Not-Modified headers when config.actioncontroller.performcaching is true. This has two problems:
+  #     * unexpected inconsistent behaviour between development & production environments
+  #     * breaks applications that use of these headers
 
   # Specifies the header that your server uses for sending files
   # config.action_dispatch.x_sendfile_header = "X-Sendfile"

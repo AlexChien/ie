@@ -14,4 +14,9 @@ class User < ActiveRecord::Base
   def name
     self.email
   end
+  
+  def has_role?(role)
+    list ||= self.roles.collect(&:name)
+    list.include?(role.to_s)
+  end
 end

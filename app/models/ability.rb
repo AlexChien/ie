@@ -26,10 +26,9 @@ class Ability
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
     if user
       can :access, :rails_admin
-      role = user.roles.first.nil? ? "" : user.roles.first.name
-      if role == "admin"
+      if user.has_role?("admin")
         can :manage, :all
-      elsif role == "hr"
+      elsif user.has_role?("hr")
         can :manage, [Department, Job]
       end
     end

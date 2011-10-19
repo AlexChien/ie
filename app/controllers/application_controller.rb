@@ -1,6 +1,12 @@
 # encoding: utf-8
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  
+  before_filter :if => Proc.new{ |c| c.request.path =~ /admin/ } do 
+    @head_javascript_paths = ['app'] 
+    @head_stylesheet_paths = ['app'] 
+  end 
+  
 
   # include AuthenticatedSystem
 

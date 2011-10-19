@@ -12,6 +12,7 @@
 RailsAdmin.config do |config|
 
   config.authorize_with :cancan
+  # config.main_app_name { ["理想能源","管理后台"] }
 
   config.included_models = ["Story","User","Template","Page","Content","Upload","Department","Job","Role"]
   

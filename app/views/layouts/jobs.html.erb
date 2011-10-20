@@ -58,8 +58,9 @@
 							<%=raw @job.requirement%>
 				        </div>
 						<center>
-							<input type="button" value="申请职位" onclick="location.href='mailto:hr@idealenergy.com?subject=<%=URI::encode("申请职位：#{@job.job_name}")%>';">			
 							<input type="button" value="返回" onclick="location.href='/job-list';">
+							<input type="button" value="申请职位" onclick="location.href='mailto:hr@idealenergy.com?subject=<%=URI::encode("申请职位：#{@job.job_name}")%>';">			
+							<span>或直接发送简历至 <a href="mailto:hr@idealenergy.com" style="color:green;">hr@idealenergy.com</a></span>
 						</center>
 				      </div>
 				<div class="blank0"></div>

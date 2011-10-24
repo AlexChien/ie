@@ -24,34 +24,34 @@
 
   datetime:
     distance_in_words:
-      half_a_minute: "半分钟前"
+      half_a_minute: "半分钟"
       less_than_x_seconds:
         one: "一秒内"
-        other: "少于 %{count} 秒前"
+        other: "少于 %{count} 秒"
       x_seconds:
         one: "一秒"
-        other: "%{count} 秒前"
+        other: "%{count} 秒"
       less_than_x_minutes:
-        one: "一分钟内"
-        other: "少于 %{count} 分钟前"
+        one: "一分钟"
+        other: "少于 %{count} 分钟"
       x_minutes:
         one: "一分钟前"
-        other: "%{count} 分钟前"
+        other: "%{count} 分钟"
       about_x_hours:
-        one: "大约一小时前"
-        other: "大约 %{count} 小时前"
+        one: "大约一小时"
+        other: "大约 %{count} 小时"
       x_days:
-        one: "一天前"
-        other: "%{count} 天前"
+        one: "一天"
+        other: "%{count} 天"
       about_x_months:
-        one: "大约一个月前"
-        other: "大约 %{count} 个月前"
+        one: "大约一个月"
+        other: "大约 %{count} 个月"
       x_months:
-        one: "一个月前"
-        other: "%{count} 个月前"
+        one: "一个月"
+        other: "%{count} 个月"
       about_x_years:
-        one: "大约一年前"
-        other: "大约 %{count} 年前"
+        one: "大约一年"
+        other: "大约 %{count} 年"
       over_x_years:
         one: "一年以上"
         other: "%{count} 年以上"
@@ -78,7 +78,19 @@
       format:
         delimiter: ""
         precision: 1
-      storage_units: [Bytes, KB, MB, GB, TB]
+      storage_units:
+        #[Bytes, KB, MB, GB, TB]
+        # Storage units output formatting.
+        # %u is the storage unit, %n is the number (default: 2 MB)
+        format: "%n %u"
+        units:
+          byte:
+            one:   "Byte"
+            other: "Bytes"
+          kb: "KB"
+          mb: "MB"
+          gb: "GB"
+          tb: "TB"
 
   support:
     array:
@@ -327,14 +339,6 @@
       for_model: "历史"
       index: "列表"
       dashboard: "管理概览"
-  datetime:
-    distance_in_words:
-      x_days: "%{count}天"
-      x_hours: "%{count}小时"
-      x_minutes: "%{count}分钟"
-      about_x_days: "大约%{count}天"
-      about_x_hours: "大约%{count}小时"
-      about_x_minutes: "大约%{count}分钟"
       
   ckeditor:
     page_title: "CKEditor Files Manager"

@@ -4,4 +4,4 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require ./DD_belatedPNG.js
+// require ./DD_belatedPNG_0.0.8a.js

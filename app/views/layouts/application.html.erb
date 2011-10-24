@@ -22,6 +22,7 @@
 			<div class="content2j">
 				<% if devise_controller? %>
 					<div class="toolbox" style="position:relative:overflow:hidden;width:500px;margin:auto;">
+						<%= flash_message %>
 						<%= yield %>
 					</div>
 				<% else %>

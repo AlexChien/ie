@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   # include AuthenticatedSystem
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to "/", :alert => exception.message
+    redirect_to root_path, :alert => exception.message
   end
 
   # Scrub sensitive parameters from your log

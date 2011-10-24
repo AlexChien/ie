@@ -24,6 +24,7 @@ class Ability
     #   can :update, Article, :published => true
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
+    can :dashboard
     if user
       can :access, :rails_admin
       if user.has_role?("admin")

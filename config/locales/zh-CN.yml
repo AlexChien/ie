@@ -218,6 +218,7 @@
          job_type: "类别"
          responsibility: "岗位职责"
          requirement: "任职资格"
+         is_published: "发布"
        role:
          name: "权限名"
     

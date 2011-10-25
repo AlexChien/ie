@@ -4,6 +4,7 @@ class Job < ActiveRecord::Base
   validates_presence_of :job_name,:job_name_en,:department_id
   
   # job_type [["社会招聘",0], ["校园招聘",1],["实习生计划",99]]
+  scope :published, where(:is_published => true)
   
   scope :in_department, lambda {|department_id|
     { :include=> [:department],:conditions => ["jobs.department_id in (?)", department_id] }

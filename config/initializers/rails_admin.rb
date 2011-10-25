@@ -133,10 +133,17 @@ RailsAdmin.config do |config|
   config.model Job do
     weight 30
     
-    field :job_name
-    field :job_name_en
-    field :department
+    field :job_name do
+      column_width 150
+    end
+    field :job_name_en do
+      column_width 150
+    end
+    field :department do
+      column_width 100
+    end
     field :job_type, :enum do
+      column_width 100
       enum do
         [["社会招聘",0], ["校园招聘",1],["实习生计划",99]]
       end
@@ -147,7 +154,10 @@ RailsAdmin.config do |config|
     field :requirement, :text do
       ckeditor true
     end
-    include_fields :created_at, :updated_at
+    field :is_published do
+      column_width 50
+    end
+    include_fields :updated_at
     list do
       exclude_fields :responsibility,:requirement
     end

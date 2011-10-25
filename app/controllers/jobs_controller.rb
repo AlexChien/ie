@@ -1,5 +1,5 @@
 class JobsController < ApplicationController  
   def show
-    @job=Job.find(params[:id])
+    @job=Job.published.find(params[:id])
   end
 end

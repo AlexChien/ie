@@ -44,7 +44,7 @@ namespace :deploy do
   after "deploy:symlink", :roles => [:web] do
     # symlink assets is done by capistrano interal task
     # run "ln -s #{shared_path}/assets #{current_release}/public/assets"
-    # migrate
+    migrate
   end  
   
   desc "Create asset packages for production, minify and compress js and css files"

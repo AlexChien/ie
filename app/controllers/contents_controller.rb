@@ -1,7 +1,11 @@
 class ContentsController < ApplicationController
   def show
     @content = Content.find(params[:id])
-    template = @content.page.template
-    render :inline => template.layout
+    if @content.link_type == 2
+      template = @content.page.template
+      render :inline => template.layout
+    else
+      redirect_to "/"
+    end
   end
 end

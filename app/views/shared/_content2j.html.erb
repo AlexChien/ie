@@ -1,8 +1,15 @@
-<%p=Page.find_by_path("/#{params[:path]}")%>
+<%if @content%>
+	<%p=@content.page%>
+	<%inline=@content.show_html_desc%>
+<%else%>
+	<%p=Page.find_by_path("/#{params[:path]}")%>
+	<%inline=p.show_columns('content').nil? ? '' : p.show_columns('content')%>
+<%end%>
+
 <%if p%>
 	<%root=p.root%>
 	<%if root.children.empty?%>
-		<%= render :inline => p.show_columns('content').nil? ? '' : p.show_columns('content')%>
+		<%= render :inline => inline%>
 	<%else%>
 		<div class="left">
 			<span><img src="/images/2j04.jpg"></span>
@@ -51,7 +58,7 @@
 			<span><img src="/images/2j04.jpg"></span>
 		</div>
 		<div class="right">
-			<%= render :inline => p.show_columns('content').nil? ? '' : p.show_columns('content')%>
+			<%= render :inline => inline%>
 		</div>
 		<div class="blank0"></div>
 	<%end%>

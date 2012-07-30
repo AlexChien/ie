@@ -22,6 +22,7 @@ Ie::Application.routes.draw do
   root :to => "home#index"
   match ":path" => "pages#show"
   match "jobs/:id" => "jobs#show"
+  match "contents/:id" => "contents#show"
   
   # map.logout    '/logout', :controller => 'sessions', :action => 'destroy'
   # map.login     '/login', :controller => 'sessions', :action => 'new'

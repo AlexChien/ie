@@ -87,6 +87,7 @@ RailsAdmin.config do |config|
     field :uploads
     field :desc, :text do
       ckeditor true
+      help '视频发布html代码：<embed allowfullscreen="true" allowscriptaccess="always" bgcolor="#FFFFFF" flashvars="file=修改你的视频路径&amp;autostart=true&amp;streamer=lighttpd" height="256" id="ply" name="ply" quality="high" src="/swf/player.swf" style="" type="application/x-shockwave-flash" width="320" wmode="opaque"></embed>'
     end
     field :desc_en, :text do
       ckeditor true

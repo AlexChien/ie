@@ -32,39 +32,41 @@ module Ie
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)  
+    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    
+
     # config.i18n.default_locale = 'zh-CN'
-    
+
     # config.serve_static_assets = true
-    
+
     # Enable the asset pipeline
     config.assets.enabled = true
-    
+
     # add path to assets path
     # config.assets.paths << "#{Rails.root}/app/assets/flash"
-    
+
     # enable production like assets behavior in development env
     # config.assets.debug = false
-    
+
     # enable MD5 fingerprint in filename
     # config.assets.digest = true
 
     # Compiled assets are written to the location specified in config.assets.prefix. The default setting will use the public/assets directory.
     # config.assets.prefix = 'public/assets'
-    
+
     # If you have other manifests or individual stylesheets and JavaScript files to include, you can add them to the precompile array:
     # config.assets.precompile += ['admin.js', 'admin.css', 'swfObject.js']
+    config.assets.paths << "#{Rails.root}/public/javascripts"
+    config.assets.precompile += ['ckeditor.js']
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    
+
     config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

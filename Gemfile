@@ -18,7 +18,7 @@ gem "jquery-rails"
 
 # vps occur the error
 # Could not find a JavaScript runtime. Se`e https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
-# gem 'therubyracer'
+gem 'therubyracer'
 gem 'execjs'
 gem "uglifier"  #minify js
 

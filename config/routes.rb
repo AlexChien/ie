@@ -1,4 +1,6 @@
 Ie::Application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   devise_for :users
 
   # namespace :admin do
@@ -16,7 +18,7 @@ Ie::Application.routes.draw do
   #   
   # end
   
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
   
   match "search" => "search#index"
   root :to => "home#index"

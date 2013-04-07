@@ -12,16 +12,16 @@ gem "paperclip"
 
 gem "sass"
 gem "coffee-script"
-gem "uglifier"  #minify js
-gem "jammit"  #asset_packager replacer
 gem "jquery-rails"
 # Use unicorn as the web server
 # gem 'unicorn'
 
 # vps occur the error
 # Could not find a JavaScript runtime. Se`e https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+# gem 'therubyracer'
 gem 'execjs'
-gem 'therubyracer'
+gem "uglifier"  #minify js
+
 
 gem 'mysql2', '0.3.7'
 gem 'ckeditor'
@@ -30,6 +30,11 @@ gem 'fastercsv'
 gem 'devise'
 gem "cancan"
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+
+group :assets do
+
+  gem "jammit"  #asset_packager replacer
+end
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'

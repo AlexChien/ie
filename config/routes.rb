@@ -1,6 +1,5 @@
 Ie::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
 
   # namespace :admin do
@@ -26,6 +25,7 @@ Ie::Application.routes.draw do
   match "jobs/:id" => "jobs#show"
   match "contents/:id" => "contents#show"
 
+  mount Ckeditor::Engine => '/ckeditor'
   # map.logout    '/logout', :controller => 'sessions', :action => 'destroy'
   # map.login     '/login', :controller => 'sessions', :action => 'new'
   # map.register  '/register', :controller => 'users', :action => 'create'

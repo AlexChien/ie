@@ -32,7 +32,7 @@ module Ie
     # config.i18n.default_locale = :de
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
+    # config.action_view.javascript_expansions[:defaults] = %w(jquery rails)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
@@ -61,8 +61,8 @@ module Ie
 
     # If you have other manifests or individual stylesheets and JavaScript files to include, you can add them to the precompile array:
     # config.assets.precompile += ['admin.js', 'admin.css', 'swfObject.js']
-    config.assets.paths << "#{Rails.root}/public/javascripts"
-    config.assets.precompile += ['ckeditor.js']
+    # config.assets.paths << "#{Rails.root}/public/javascripts"
+    # config.assets.precompile += ['ckeditor.js']
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'

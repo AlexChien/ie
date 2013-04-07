@@ -1,6 +1,6 @@
 Ie::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
+  mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
 
   # namespace :admin do
@@ -10,22 +10,22 @@ Ie::Application.routes.draw do
   #       put 'update_role'
   #     end
   #   end
-  #   
+  #
   #   resources :session
   #   resources :categories
   #   resources :articles
   #   resources :panel_categories
-  #   
+  #
   # end
-  
-  
-  
+
+
+
   match "search" => "search#index"
   root :to => "home#index"
   match ":path" => "pages#show"
   match "jobs/:id" => "jobs#show"
   match "contents/:id" => "contents#show"
-  
+
   # map.logout    '/logout', :controller => 'sessions', :action => 'destroy'
   # map.login     '/login', :controller => 'sessions', :action => 'new'
   # map.register  '/register', :controller => 'users', :action => 'create'
@@ -39,34 +39,34 @@ Ie::Application.routes.draw do
   # map.reset_password  '/reset_password/:password_reset_code', :controller => 'users', :action => 'reset_password'
   # map.reset  '/reset', :controller => 'users', :action => 'reset', :method => :put
   # map.search  '/search', :controller => 'search', :action => 'index'
-  # 
+  #
   # map.resources :users,:member => {:edit_role => :get,:update_role => :put}
-  # 
+  #
   # map.resource :session
-  # 
+  #
   # map.resources :categories
-  # 
+  #
   # map.resources :articles
-  # 
+  #
   # map.resources :panel_categories
-  # 
+  #
   # map.resources :panel_contents,:member => {:croper => :get,:crop => :put}
-  # 
+  #
   # map.resources :albums,:member => {:assets_new => :get,:assets_create => :put,:assets_batch=>:put}
-  # 
+  #
   # map.resources :assets,:member => {:to_primary => :put}
-  # 
+  #
   # map.resources :my, :collection => {:orders => :get},
   #                    :member => {:order_show => :get}
-  # 
+  #
   # map.resources :search
-  # 
+  #
   # map.ws_teaser '/webservice/teaser_album/:id.:format', :controller => "webservice", :action => "teaser_album"
-  # 
+  #
   # map.root :controller => 'home', :action => 'index'
-  
-  
-  
+
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

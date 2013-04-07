@@ -64,4 +64,17 @@ class Content < ActiveRecord::Base
     end
   end
   
+  def show_html_desc
+    title = self.show_columns("title")
+    desc = self.show_columns("desc")
+    source = self.show_columns("source")
+    "
+      <div class='tittle-a' style='text-align:center;'>#{title}</div>
+      <div style='text-align:center;'>
+      <span>日期：#{self.issue_date.strftime("%Y-%m")}</span>
+      <span style='padding-left:20px;'>#{source.blank? ? '' : '来源：'+source}</span>
+      </div>
+      <div>#{desc}</div>
+    "
+  end
 end

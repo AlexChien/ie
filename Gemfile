@@ -1,4 +1,5 @@
-source 'http://rubygems.org'
+source 'http://ruby.taobao.org'
+# source 'http://rubygems.org'
 
 # gem 'rails', '3.1.0'
 gem 'rails', '3.1.1'
@@ -10,29 +11,28 @@ gem 'rails', '3.1.1'
 gem "will_paginate", '~> 3.0.0'
 gem "paperclip"
 
-gem "sass"
-gem "coffee-script"
+
 gem "jquery-rails"
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# vps occur the error
-# Could not find a JavaScript runtime. Se`e https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
-gem 'therubyracer'
-gem 'execjs'
-gem "uglifier"  #minify js
-
-
 gem 'mysql2', '0.3.7'
-gem 'ckeditor'
+gem 'ckeditor', '~> 3.7'
 
 gem 'fastercsv'
 gem 'devise'
 gem "cancan"
 # gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
-gem 'rails_admin'
+gem 'rails_admin', '0.4.7'
 
 group :assets do
+  gem "sass"
+  gem "coffee-script"
+  # vps occur the error
+  # Could not find a JavaScript runtime. Se`e https://github.com/sstephenson/execjs for a list of available runtimes. (ExecJS::RuntimeUnavailable)
+  gem 'therubyracer'
+  gem 'execjs'
+  gem "uglifier"  #minify js
 
   gem "jammit"  #asset_packager replacer
 end

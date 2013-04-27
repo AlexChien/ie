@@ -16,6 +16,8 @@ module Ie
     # Custom directories with classes and modules you want to be autoloadable.
     # config.autoload_paths += %W(#{config.root}/extras)
 
+    # config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
+
     # Only load the plugins named here, in the order given (default is alphabetical).
     # :all can be used as a placeholder for all plugins not explicitly named.
     # config.plugins = [ :exception_notification, :ssl_requirement, :all ]
@@ -51,7 +53,7 @@ module Ie
     # config.assets.paths << "#{Rails.root}/app/assets/flash"
 
     # enable production like assets behavior in development env
-    # config.assets.debug = false
+    config.assets.debug = false
 
     # enable MD5 fingerprint in filename
     # config.assets.digest = true
@@ -62,11 +64,9 @@ module Ie
     # If you have other manifests or individual stylesheets and JavaScript files to include, you can add them to the precompile array:
     # config.assets.precompile += ['admin.js', 'admin.css', 'swfObject.js']
     # config.assets.paths << "#{Rails.root}/public/javascripts"
-    # config.assets.precompile += ['ckeditor.js']
+    config.assets.precompile += Ckeditor.assets
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-
-    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end
